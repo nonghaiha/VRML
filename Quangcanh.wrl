@@ -10,7 +10,7 @@ Background {
 Transform {
   center 0.9 0 0.9
   rotation 0 1 0 1.57
-  scale 520 20 520
+  scale 600 20 600
   translation -0.9 0.0 -0.9
   children [
       Shape {
@@ -33,6 +33,11 @@ Transform {
   ]
 }
 Transform {
+	children [
+		Shape {}
+	]
+}
+Transform {
 	translation 3 76.5 45
 	children [
 		Inline {url"cay.wrl"}
@@ -41,6 +46,48 @@ Transform {
 }
 Transform {
 	translation 300 76.5 -106
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	translation 45 76.5 236
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	translation 124 76.5 -306
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	translation 322 76.5 6
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	translation 45 76.5 6
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	translation 221 76.5 400
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	translation 198 76.5 42
 	children [
 		Inline {url"cay.wrl"}
 	]
@@ -127,6 +174,30 @@ Transform {
 Transform {
 	scale 0.7 0.7 0.7
 	translation -156 50.5 70
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	scale 0.7 0.7 0.7
+	translation 225 50.5 70
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	scale 0.7 0.7 0.7
+	translation 3 50.5 289
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	scale 0.7 0.7 0.7
+	translation 5 50.5 70
 	children [
 		Inline {url"cay.wrl"}
 	]
@@ -317,6 +388,22 @@ Transform {
 		Inline {url"fire.wrl"}
 	]
 	
+}
+Transform {
+	translation	-45 5 0
+	scale 10.5 0.5 0.5 
+	rotation 0 10 0 1.5
+	children [
+		Shape {
+			appearance Appearance {
+				   material Material { diffuseColor 0 0 0}
+				   texture	ImageTexture {url "outUVriver2.jpg"}
+			}
+			geometry Box {
+				size 100 0 100 
+			}
+		}
+	]
 }
 
 
