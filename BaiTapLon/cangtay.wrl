@@ -1,0 +1,56 @@
+#VRML V2.0 utf8
+
+DEF	cangtay Transform {
+	translation	0 0 0
+	scale 0.8 1 1
+	children [
+		Shape {
+			appearance Appearance {
+			material Material {}
+				texture	ImageTexture {
+				url	"da.png"
+				repeatS	TRUE
+				repeatT	TRUE
+					}
+				}
+			geometry Extrusion {
+				crossSection [
+					1 0 , 0.94 -0.355,0.71 -0.71,0.355 -0.94
+					0 -1,-0.355 -0.94 ,-0.71 -0.71,	 -0.94 -0.355
+				  -1 0 ,-0.94 0.355, -0.71 0.71,  -0.355 0.94
+					0 1 ,0.355 0.94, 0.71 0.71 , 0.94 0.355 ,          1 0 
+				]
+			spine [0 0 0,    0 -0.4 0,  0 -0.9 0,   0 -3 0]
+			scale [0.3 0.3,   0.33 0.33,   0.33 0.33,   0.15 0.15,    ] 
+			creaseAngle	1
+			beginCap TRUE
+			endCap	 TRUE
+			solid	 FALSE		
+			}
+		}
+		DEF tron Transform {
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {}
+						texture ImageTexture {
+							url	"da.png"
+							repeatS TRUE
+							repeatT	TRUE
+						}
+					}
+					geometry Sphere	{
+						radius 0.3
+					}
+				}
+			]
+		}
+			Transform {
+					translation	0 -3.1 0
+					scale 0.7 1.2 1.0
+					children [
+						USE	tron
+					]
+				}
+	]
+}

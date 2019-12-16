@@ -1,0 +1,215 @@
+#VRML V2.0 utf8
+
+Transform {
+  scale .8 .8 .8
+  children [
+
+    #main body top
+    Transform {
+      translation -1 0 0
+      children [
+        Shape {
+          appearance DEF blue Appearance {
+            material Material {
+              diffuseColor 0 0 1
+            } # end material
+          } # end appearance
+          geometry Box {
+            size 14 .1 4
+          } # end geometry
+        } # end shape
+      ] # end children
+    } # end body top transform
+
+
+    #main body bottom
+    Transform {
+      translation -1 -2 0
+      children [
+        Shape {
+          appearance DEF blue Appearance {
+            material Material {
+              diffuseColor 0 0 1
+            } # end material
+          } # end appearance
+          geometry Box {
+            size 14 .1 4
+          } # end geometry
+        } # end shape
+      ] # end children
+    } # end body bottom transform
+
+    # roof
+    Transform {
+      translation -1 2 0
+      children [
+        Shape {
+          appearance USE blue 
+          geometry Box {
+            size 7 .1 4
+          } # end geometry
+        } # end shape
+      ] # end children
+    } # end roof transform
+
+
+    # Left body panel
+    Transform {
+      translation -1 -1 2
+      children [
+        Shape {
+          appearance USE blue 
+          geometry Box {
+            size 14 2 .1
+          } # end geometry
+        } # end shape
+      ] # end children
+    } # end roof transform
+
+    # Right body panel
+    Transform {
+      translation -1 -1 -2
+      children [
+        Shape {
+          appearance USE blue 
+          geometry Box {
+            size 14 2 .1
+          } # end geometry
+        } # end shape
+      ] # end children
+    } # end roof transform
+
+    # Nose
+    Transform {
+      translation -8 -1 0
+      children [
+        Shape {
+          appearance USE blue 
+          geometry Box {
+            size .1 2 4
+          } # end geometry
+        } # end shape
+      ] # end children
+    } # end roof transform
+
+    # Tail
+    Transform {
+      translation 6 -1 0
+      children [
+        Shape {
+          appearance USE blue 
+          geometry Box {
+            size .1 2 4
+          } # end geometry
+        } # end shape
+      ] # end children
+    } # end roof transform
+
+    # left window panel
+    Shape {
+      appearance DEF glass Appearance {
+        material Material {
+          diffuseColor 0 0 1
+          transparency .5
+        } # end material
+      } # end appearance
+      geometry Extrusion {
+        crossSection [
+          0 0, 
+         -5 0,
+         -4 2, 
+          3 2,
+          4 0,
+          0 0 
+        ] # end crossSec
+        spine [
+          -.5 0 2.1,
+          -.5 0 2,
+        ] # end spine
+      } # end geometry
+    } # end shape
+
+    # right window panel
+    Shape {
+      appearance USE glass
+      geometry Extrusion {
+        crossSection [
+          0 0, 
+         -5 0,
+         -4 2, 
+          3 2,
+          4 0,
+          0 0 
+        ] # end crossSec
+        spine [
+          -.5 0 -2,
+          -.5 0 -2.1,
+        ] # end spine
+      } # end geometry
+    } # end shape
+
+    # front window
+    Transform {
+      translation -5 1 0
+      rotation 0 0 1 -.5
+      children [
+        Shape {
+          appearance USE glass 
+          geometry Box {
+            size .1 2 4
+          } # end geometry
+        } # end shape
+      ] # end children
+    } # end roof transform
+
+    # back window
+    Transform {
+      translation 3 1 0
+      rotation 0 0 1 .5
+      children [
+        Shape {
+          appearance USE glass 
+          geometry Box {
+            size .1 2 4
+          } # end geometry
+        } # end shape
+      ] # end children
+    } # end roof transform
+
+    # front wheel
+    Transform { 
+      rotation 1 0 0 1.57
+      translation -6 -2 0
+      children [
+        DEF wheel Shape { 
+          appearance Appearance {
+            material Material {
+              diffuseColor .2 .2 .2
+            } # end material
+          } # end appearance
+          geometry Cylinder {
+            radius 1
+            height 4.3
+          } # end geometry
+        } # end shape
+      ] # end children
+    } # end wheel transform
+
+    # rear wheel
+    Transform { 
+      rotation 1 0 0 1.57
+      translation 4 -2 0
+      children [
+        USE wheel 
+      ] # end children
+    } # end transform 
+
+
+  ] # end car children
+} # end transform
+
+
+#Set browser to examine mode
+NavigationInfo {
+  type "EXAMINE"
+} # end navInfo

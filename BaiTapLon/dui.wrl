@@ -1,0 +1,49 @@
+#VRML V2.0 utf8
+
+DEF	dui Transform {
+	translation	0 0 0
+	scale 0.8 1 0.9
+	children [
+		Shape {
+			appearance Appearance {
+			material Material {diffuseColor 0.3 0.3 0.3}
+				
+				}
+			geometry Extrusion {
+				crossSection [
+					1 0 , 0.94 -0.355,0.71 -0.71,0.355 -0.94
+					0 -1,-0.355 -0.94 ,-0.71 -0.71,	 -0.94 -0.355
+				  -1 0 ,-0.94 0.355, -0.71 0.71,  -0.355 0.94
+					0 1 ,0.355 0.94, 0.71 0.71 , 0.94 0.355 ,          1 0 
+				]
+			spine [0 0 0,  0 -0.6 0, 0 -2.3 0,0 -2.5 0   0 -3.5 0]
+			scale [1.0 1.0, 1.1 1.1,0.75 0.75,   0.75 0.75,   0.6 0.6  ] 
+			creaseAngle	1
+			beginCap TRUE
+			endCap	 TRUE
+			solid	 FALSE		
+			}
+		}
+		DEF tron Transform {
+			translation	0 -3.5 0.15
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {diffuseColor 0.3 0.3 0.3}
+						
+					}
+					geometry Sphere	{
+						radius 0.6
+					}
+				}
+			]
+		}
+		Transform {
+			translation	0 5.8 -0.25
+			scale 1.65 1.65 1.65
+			children [
+				USE	tron
+			]
+		}
+	]
+}

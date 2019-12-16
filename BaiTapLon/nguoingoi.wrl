@@ -1,0 +1,158 @@
+#VRML V2.0 utf8
+
+
+DEF ng Transform	{
+	children [
+#Đầu
+DEF	Dau Transform {
+	translation	0 6.2 0
+	scale 1 1.2 1
+	children [
+		Inline {url "dau.wrl"}
+	]
+}
+#Cổ
+DEF	Co Transform {
+	translation	0 5 0
+	children [
+		Shape {
+			appearance Appearance {
+			material Material {}
+				texture	ImageTexture {
+				url	"da.png"
+				repeatS	TRUE
+				repeatT	TRUE
+					}
+				}
+
+			geometry Cylinder {
+				 bottom	TRUE
+				 height	0.3
+				radius 0.4
+				top	TRUE
+			}
+		}
+	]
+}
+#Thân
+DEF	than Transform {
+	scale 1 1 0.6
+	children [
+		Shape {
+			appearance Appearance {
+			material Material {}
+				texture	ImageTexture {
+				url	"ao2.jpg"
+				repeatS	TRUE
+				repeatT	TRUE
+					}
+				}
+			geometry Extrusion {
+				crossSection [
+					1 0 , 0.94 -0.355,0.71 -0.71,0.355 -0.94
+					0 -1,-0.355 -0.94 ,-0.71 -0.71,	 -0.94 -0.355
+				  -1 0 ,-0.94 0.355, -0.71 0.71,  -0.355 0.94
+					0 1 ,0.355 0.94, 0.71 0.71 , 0.94 0.355 ,          1 0 
+				]
+			spine [0 0 0,    0 0.8 0,   0 1 0,    0 3.5 0   , 0 4.3 0,   0 4.9 0,]
+			scale [1.6 1.6, 1.4 1.4,   1.4 1.4,    1.8 1.8, 1.8 1.8 , 0.8 0.8,] 
+			creaseAngle	1
+			beginCap TRUE
+			endCap	 TRUE
+			solid	 FALSE		
+			}
+		}
+	]
+}
+#Hông
+DEF	hong Transform {
+	scale 1 1 0.6
+	children [
+		Shape {
+			appearance Appearance {
+			material Material {diffuseColor 0.3 0.3 0.3}
+				
+				}
+			geometry Extrusion {
+				crossSection [
+					1 0 , 0.94 -0.355,0.71 -0.71,0.355 -0.94
+					0 -1,-0.355 -0.94 ,-0.71 -0.71,	 -0.94 -0.355
+				  -1 0 ,-0.94 0.355, -0.71 0.71,  -0.355 0.94
+					0 1 ,0.355 0.94, 0.71 0.71 , 0.94 0.355 ,          1 0 
+				]
+			spine [0 0 0,   0 -0.5 0 ,0 -0.5 0  0 -1.5 0]
+			scale [1.6 1.6, 1.5 1.5  , 1.5  1.5,0.25 0.25] 
+			creaseAngle	1
+			beginCap TRUE
+			endCap	 TRUE
+			solid	 FALSE		
+			}
+		}
+	]
+}
+#tay
+DEF	tay1 Transform {
+	translation	-2 3.75 0
+	rotation 1 0 0 -1
+	children [
+		Inline {url "tay.wrl"}
+	]
+}
+DEF	tay2 Transform {
+	translation	2 3.75 0
+	rotation 1 0 0 -1
+	children [
+		Inline {url "tay.wrl"}
+	]
+}
+#Chan
+	DEF chan Transform {
+		children [
+Transform {
+	rotation 1 0 0 -1.57
+	translation	-1 -0.8 0.5
+	children [
+		Inline {
+			url	"dui.wrl"
+		}
+	]
+}
+
+	Transform {
+		rotation 1 0 0 0.19	   
+		translation	-1 -0.8 4.2
+		children [
+			Inline {
+				url	"cangchan.wrl"
+				}
+		]
+	}
+]
+}
+DEF chan2 Transform {
+	children [
+Transform {
+	rotation 1 0 0 -1.57
+	translation	1 -0.8 0.5
+	children [
+		Inline {
+			url	"dui.wrl"
+		}
+	]
+}
+
+	Transform {
+		rotation 1 0 0 0.19
+		translation	1 -0.8 4.2
+		children [
+			Inline {
+				url	"cangchan.wrl"
+				}
+		]
+	}
+]
+}
+]
+}
+
+

@@ -1,0 +1,63 @@
+#VRML V2.0 utf8
+
+
+DEF canh Transform {translation 0.05 1.4 0
+	rotation 0 0 -1 0.08
+	scale 1.1 1 0.9
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {}
+				texture	ImageTexture {
+					url	"vocay.jpg"
+				}
+			}
+			geometry Cylinder {height 2 radius 0.3}
+		}
+	]
+}
+Transform {translation -0.05 1.4 0
+	rotation 0 0 -1 -0.08
+	scale 1.1 1 0.9
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {}
+				texture	ImageTexture {
+					url	"vocay.jpg"
+				}
+			}
+			geometry Cylinder {height 2 radius 0.3}
+		}
+	]
+}
+Transform {	
+	scale 1.1 1 0.9
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {}
+				texture	ImageTexture {
+					url	"vocay.jpg"
+				}
+			}
+			geometry Cylinder {height 2 radius 0.31}
+		}
+	]
+}
+Transform {
+	rotation 0 0 1 4.17
+	scale 0.5 0.5 0.5
+	children [
+		USE	canh
+
+	]
+}
+Transform {
+	translation 0.8 -1 0
+	scale 0.4 0.2 0.4
+	children [
+		USE	canh
+
+	]
+}

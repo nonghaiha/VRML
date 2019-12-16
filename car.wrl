@@ -1,0 +1,405 @@
+#VRML V2.0 utf8
+
+DEF World Transform {
+   rotation	1 0 0  0.523599
+   children [
+      DirectionalLight {
+	 on	TRUE
+	 intensity	1
+	 color	1 1 1
+	 direction	1 0 0
+      },
+      DEF Car Group {
+	 children [
+	    DEF LeftFrontWheel Transform {
+	       translation	-2 0 2
+	       children [
+		  Shape {
+		     appearance
+		     Appearance {
+			material
+			Material {
+			   diffuseColor	1 0 0
+			}
+		     }
+		     geometry
+		     DEF Wheel Sphere {
+			radius	1
+		     }
+		  }
+		 ]
+	    },
+	    DEF RightFrontWheel Transform {
+	       translation	-2 0 -2
+	       children [
+		  Shape {
+		     appearance
+		     Appearance {
+			material
+			Material {
+			   diffuseColor	0 1 0
+			}
+		     }
+		     geometry USE Wheel
+		  }
+		 ]
+	    },
+	    DEF LeftRearWheel Transform {
+	       translation	2 0 2
+	       children [
+		  Shape {
+		     appearance
+		     Appearance {
+			material
+			Material {
+			   diffuseColor	0 0 1
+			}
+		     }
+		     geometry USE Wheel
+		  }
+		 ]
+	    },
+	    DEF RightRearWheel Transform {
+	       translation	2 0 -2
+	       children [
+		  Shape {
+		     appearance
+		     Appearance {
+			material
+			Material {
+			   diffuseColor	1 1 0
+			}
+		     }
+		     geometry USE Wheel
+		  }
+		 ]
+	    },
+	    DEF WindShield Transform {
+	       translation	-2 1 0
+	       rotation	0 0 1  -1.0472
+	       children [
+		  Shape {
+		     appearance
+		     Appearance {
+			material
+			Material {
+			   diffuseColor	0.2 0.2 0.2
+			   specularColor	0.8 0.8 0.8
+			   shininess	0.7
+			   transparency	0.8
+			}
+		     }
+		     geometry
+		     Box {
+			size	0.01 2 1.5
+		     }
+		  }
+		 ]
+	    },
+	    DEF LeftSign Transform {
+	       translation	0 0 1.01
+	       rotation	0 1 0  -1.5708
+	       children [
+		  DEF Sign Group {
+		     children [
+			Shape {
+			   appearance
+			   Appearance {
+			      material
+			      DEF SignMaterial Material {
+				 diffuseColor	1 1 1
+				 specularColor	0.8 0.8 0.8
+				 shininess	0.7
+			      }
+			      texture
+			      DEF SignTexture ImageTexture {
+				 url	"number.gif"
+			      }
+			   }
+			   geometry
+			   DEF SignBox Box {
+			      size	0.01 1 1
+			   }
+			}
+		       ]
+		  }
+		 ]
+	    },
+	    DEF RightSign Transform {
+	       translation	0 0 -1.01
+	       rotation	0 1 0  -1.5708
+	       children [
+		  Group {
+		     children [
+			Shape {
+			   appearance
+			   Appearance {
+			      material USE SignMaterial
+			      texture USE SignTexture
+			   }
+			   geometry
+			   Box {
+			      size	0.01 1 1
+			   }
+			}
+		       ]
+		  }
+		 ]
+	    },
+	    DEF DrivingWheel Transform {
+	       translation	-1.2 0.5 0.2
+	       rotation	0 0 1  -1.5708
+	       children [
+		  Shape {
+		     appearance
+		     Appearance {
+			material
+			Material {
+			   diffuseColor	0.2 0.2 0.2
+			}
+		     }
+		     geometry
+		     Cylinder {
+			radius	0.5
+			height	0.01
+		     }
+		  }
+		 ]
+	    },
+	    DEF Body Group {
+	       children [
+		  Shape {
+		     appearance
+		     Appearance {
+			material
+			Material {
+			   diffuseColor	1 1 1
+			}
+		     }
+		     geometry
+		     Box {
+			size	6 1 2
+		     }
+		  }
+		 ]
+	    },
+	    DEF RightHeadLight Transform {
+	       translation	-3 0.3 -0.5
+	       children [
+		  DEF HeadLight Group {
+		     children [
+			Transform {
+			   translation	-0.2 0 0
+			   rotation	0 0 1  -1.5708
+			   children [
+			      Shape {
+				 appearance
+				 Appearance {
+				    material
+				    DEF HeadLightMaterial Material {
+				       diffuseColor	1 0 0
+				    }
+				 }
+				 geometry
+				 DEF HeadLightCone Cone {
+				    bottomRadius	0.09
+				    height	0.5
+				 }
+			      }
+			     ]
+			},
+			Transform {
+			   translation	-0.45 0 0
+			   children [
+			      DEF HeadLightPointLight PointLight {
+				 intensity	1
+				 color	1 1 0.9
+			      },
+			      Shape {
+				 appearance
+				 Appearance {
+				    material
+				    DEF PointLightMaterial Material {
+				       emissiveColor	1 1 0
+				    }
+				 }
+				 geometry
+				 DEF PointLightSphere Sphere {
+				    radius	0.1
+				 }
+			      }
+			     ]
+			}
+		       ]
+		  }
+		 ]
+	    },
+	    DEF LeftHeadLight Transform {
+	       translation	-3 0.3 0.5
+	       children [
+		  Group {
+		     children [
+			Transform {
+			   translation	-0.2 0 0
+			   rotation	0 0 1  -1.5708
+			   children [
+			      Shape {
+				 appearance
+				 Appearance {
+				    material USE HeadLightMaterial
+				 }
+				 geometry
+				 Cone {
+				    bottomRadius	0.09
+				    height	0.5
+				 }
+			      }
+			     ]
+			},
+			Transform {
+			   translation	-0.45 0 0
+			   children [
+			      PointLight {
+				 intensity	1
+				 color	1 1 0.9
+			      },
+			      Shape {
+				 appearance
+				 Appearance {
+				    material USE PointLightMaterial
+				 }
+				 geometry USE PointLightSphere
+			      }
+			     ]
+			}
+		       ]
+		  }
+		 ]
+	    }
+	   ]
+      },
+      Transform {
+	 translation	0 -2 5
+	 children [
+	    Anchor {
+	       url	"http://www.lamborghini.com/"
+	       children [
+		  Transform {
+		     translation	4.5 0 0
+		     rotation	1 0 0  -1.0472
+		     scale	0.125 0.125 0.125
+		     center	0 0 0
+		     children [
+			Shape {
+			   appearance
+			   Appearance {
+			      material
+			      DEF _DefMat Material {
+			      }
+			   }
+			   geometry
+			   Text {
+			      fontStyle
+			      FontStyle {
+				 size	10
+				 justify	"MIDDLE"
+			      }
+			      string	"Lamborghini"
+			      length	0
+			   }
+			}
+		       ]
+		  }
+		 ]
+	    },
+	    Anchor {
+	       url	"http://www.bmwusa.com/"
+	       children [
+		  Transform {
+		     translation	-4.5 0 0
+		     rotation	1 0 0  -1.0472
+		     scale	0.125 0.125 0.125
+		     center	0 0 0
+		     children [
+			Shape {
+			   appearance
+			   Appearance {
+			      material USE _DefMat
+			   }
+			   geometry
+			   Text {
+			      fontStyle
+			      FontStyle {
+				 size	10
+				 justify	"MIDDLE"
+			      }
+			      string	"BMW"
+			      length	0
+			   }
+			}
+		       ]
+		  }
+		 ]
+	    },
+	    Anchor {
+	       url	"http://www.ford.com/"
+	       children [
+		  Transform {
+		     translation	4.5 -1 2
+		     rotation	1 0 0  -1.0472
+		     scale	0.125 0.125 0.125
+		     center	0 0 0
+		     children [
+			Shape {
+			   appearance
+			   Appearance {
+			      material USE _DefMat
+			   }
+			   geometry
+			   Text {
+			      fontStyle
+			      FontStyle {
+				 size	10
+				 justify	"MIDDLE"
+			      }
+			      string	"Ford"
+			      length	0
+			   }
+			}
+		       ]
+		  }
+		 ]
+	    },
+	    Anchor {
+	       url	"http://www.gm.com/"
+	       children [
+		  Transform {
+		     translation	-4.5 -1 2
+		     rotation	1 0 0  -1.0472
+		     scale	0.125 0.125 0.125
+		     center	0 0 0
+		     children [
+			Shape {
+			   appearance
+			   Appearance {
+			      material USE _DefMat
+			   }
+			   geometry
+			   Text {
+			      fontStyle
+			      FontStyle {
+				 size	10
+				 justify	"MIDDLE"
+			      }
+			      string	"General Moters"
+			      length	0
+			   }
+			}
+		       ]
+		  }
+		 ]
+	    }
+	   ]
+      }
+     ]
+}

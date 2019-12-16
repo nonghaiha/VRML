@@ -1,0 +1,299 @@
+#VRML V2.0 utf8
+
+#than
+DEF toanthan Transform {
+	translation	0 0 0
+	children [
+		Transform  {
+			translation	0 0 0
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0.8 0.8 0.8
+						}
+					}
+					geometry Extrusion {
+						crossSection [
+							1  0,  .71 -.71,
+    						0 -1,  -.71 -.71,
+    						-1  0,  -.71  .71,
+    						0  1,   .71  .71   1 0
+						]
+						spine [0 0 0, 0 0.2 0, 0 0.4 0, 0 0.7 0, 0 0.75 0, 0 0.8 0, 0 0.82 0, 0 0.84 0, 0 0.88 0, 0 0.92 0, 0 0.96 0, 0 0.98 0]
+						scale [0.3 0.2, 0.15 0.15, 0.2 0.15, 0.3 0.2, 0.1 0.1, 0.1 0.1, 0.12 0.12, 0.14 0.14, 0.146 0.145, 0.143 0.14, 0.12 0.12, 0.1 0.1 ]
+					}
+				}
+				#mu
+				Transform {
+					translation	0 0.96 0
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {
+									diffuseColor 0 1 0.5
+								}
+							}
+							geometry Cylinder {
+								height 0.08
+								radius 0.15
+							}
+						}
+					]
+				}
+				Transform {
+					translation	0 0.92 0.15
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {
+									diffuseColor 0 1 0.5
+								}
+							}
+							geometry Cylinder {
+								height 0.01
+								radius 0.15
+							}
+						}
+					]
+				}
+			]
+		}
+		#chan
+		DEF chantrai Transform	{
+			translation 0 0 0
+			children [
+				Transform {
+					translation	-0.13 -0.4 0
+					rotation 0 0 1 -0.06
+					children [
+						DEF chan Shape {
+							appearance Appearance {
+								material Material {
+									diffuseColor 0.8 0.8 0.8
+								}
+							}
+							geometry Extrusion {
+								crossSection [
+									1  0,  .71 -.71,
+    								0 -1,  -.71 -.71,
+    								-1  0,  -.71  .71,
+    								0  1,   .71  .71   1 0
+								]
+								#spine [0 0 0.15, 0 0 0.01, 0 0.03 0, 0 0.2 0. 0 0.3 0, 0 0.4 0, 0 0.6 0]
+								spine [0 -0.3 0.15, 0 -0.3 0.01, 0 -0.27 0, 0 0 0 ,0 0.1 0, 0 0.2 0, 0 0.4 0 ]
+								scale [0.025 0.025, 0.035 0.035, 0.035 0.035, 0.06 0.06, 0.075 0.075, 0.055 0.055, 0.075 0.075 ]
+							}
+						}
+					]
+				}
+			]
+
+		}
+		DEF chanphai Transform	{
+			translation 0 0 0
+			children [
+				Transform {
+					translation	0.13 -0.4 0
+					rotation 0 0 1 0.06
+					children USE chan
+				}
+			]
+		}
+		
+		
+
+		#tay 
+		#tay trai
+		DEF taytrai Transform {
+			translation	-0.16 0.65 0
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0.8 0.8 0.8
+						}
+					}
+					geometry Extrusion {
+						crossSection [
+							1  0,  .71 -.71,
+    						0 -1,  -.71 -.71,
+    						-1  0,  -.71  .71,
+    						0  1,   .71  .71   1 0
+						]
+						spine [0 0 0 , -0.3 -0.15 0,-0.31 -0.15 0,-0.3 0 0, -0.27 0.15 0, -0.27 0.16 0]
+						scale [0.03 0.03, 0.03 0.03,0.03 0.03,0.03 0.03, 0.025 0.025, 0.05 0.08]
+					}
+				}
+				
+			]
+		}
+
+		#lao
+		DEF diathucan Transform {
+			translation	-0.42 0.81 0
+			children [
+				Shape {
+					appearance Appearance {	
+						material Material {
+							diffuseColor 0.8 0.8 0.8
+						}
+					}
+					#geometry Box {
+					#	size 0.35 0.01 0.25
+					#}
+					geometry Cylinder {	  
+						radius 0.01
+						height 2
+					}
+				}
+			]
+		}
+
+		#tay phải
+
+		DEF tayphai Transform {
+			translation	0.2 0.63 0
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0.8 0.8 0.8
+						}
+					}
+					geometry Extrusion {
+						crossSection [
+							1  0,  .71 -.71,
+    						0 -1,  -.71 -.71,
+    						-1  0,  -.71  .71,
+    						0  1,   .71  .71   1 0
+						]
+						spine [0 0 0, 0.2 -0.3 0, 0.21 -0.3 0, 0.21 -0.5 0, 0.21 -0.51 0]
+						scale [0.03 0.03, 0.03 0.03, 0.03 0.03, 0.026 0.026, 0.07 0.04]
+					}
+				}
+			]
+		}	
+		DEF	touch TouchSensor {
+		}
+	]
+}
+
+
+DEF	timerdia TimeSensor	{
+	cycleInterval 9.5
+	enabled	FALSE
+}
+DEF	timer TimeSensor {
+	cycleInterval 5.0
+	enabled FALSE
+}
+DEF	nguoiquay OrientationInterpolator {
+	key	[0 0.2 0.4 0.6 0.8 1]
+	keyValue [0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0, 0 1 0 -1.57]
+}
+DEF	timernguoi TimeSensor {
+	cycleInterval 5
+	enabled	FALSE
+	startTime 4
+
+}
+
+DEF	pdichuyen PositionInterpolator {
+	key	[0 0.2 0.4 0.6 0.8 1]
+	keyValue [0 0 0, 0 0 0.6, 0 0 1.2, 0 0 1.8, 0 0 2.4, -0.5 0 2.65]
+}
+
+DEF	timerchan TimeSensor {
+	cycleInterval 6
+	enabled	FALSE
+}
+DEF	pchantrai OrientationInterpolator {
+	key	[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
+	keyValue [1 0 0 0,1 0 0 0.5,1 0 0 0,1 0 0 -0.5,1 0 0 0,1 0 0 0.5, 1 0 0 0, 1 0 0 -0.5, 1 0 0 -0.2, 1 0 0 0]
+}
+DEF	pchanphai OrientationInterpolator {
+	key	[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
+	keyValue [1 0 0 0,1 0 0 -0.5,1 0 0 0,1 0 0 0.5,1 0 0 0, 1 0 0 -0.5, 1 0 0 0, 1 0 0 0.5, 1 0 0 0.2, 1 0 0 0]
+}
+DEF	timertayphai TimeSensor	{
+	cycleInterval 10
+	enabled	FALSE
+}
+
+DEF	ptaytrai OrientationInterpolator {
+	key	[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
+	keyValue [0 0 0 0 ,0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 1 0 0.75,0 1 0 1.57, 0 1 0 1.7, 0 0 0 0, 1 0.5 0 3]
+}
+DEF	ptayphai OrientationInterpolator	{
+	key	[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
+	keyValue [0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 1 0 1 -2, 1 0 1 -2, 1 0 1 -2, 1 0 1 -1, 0 0 0 0]
+}
+
+DEF	pdiathucan PositionInterpolator	{
+	key	[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
+	keyValue [-0.42 0.81 0,-0.42 0.81 0,-0.42 0.81 0,-0.42 0.81 0,-0.42 0.81 0,-0.42 0.81 0.2,-0.42 0.81 0.3,-0.42 0.81 0.4,-0.2 0.81 0.5, 0 0.5 0.65, 0.1 0.1 0.7]
+}
+
+DEF	script Script {
+	eventIn	SFBool turn
+	eventOut SFBool	lock
+	eventOut SFBool	unlock
+	field SFBool x FALSE
+	url	"javascript:
+	function  turn(val){
+		if(val){
+			x=!x;
+			if(x){
+				lock=true;
+				unlock=false;
+			}
+			else{
+				lock=false;
+				unlock=true;
+			}
+		}
+	}
+	"
+}
+
+ROUTE touch.isActive TO	script.turn
+ROUTE script.lock TO timer.enabled
+ROUTE script.lock TO timernguoi.enabled
+ROUTE script.lock TO timerchan.enabled
+ROUTE script.lock TO timertayphai.enabled
+ROUTE script.lock TO timerdia.enabled
+
+ROUTE touch.touchTime TO timer.startTime
+ROUTE touch.touchTime TO timernguoi.startTime
+ROUTE touch.touchTime TO timerchan.startTime
+ROUTE touch.touchTime TO timertayphai.startTime
+ROUTE touch.touchTime TO timerdia.startTime
+
+ROUTE timer.fraction_changed TO	pdichuyen.set_fraction
+ROUTE pdichuyen.value_changed TO toanthan.translation
+
+ROUTE timernguoi.fraction_changed TO nguoiquay.set_fraction
+ROUTE nguoiquay.value_changed TO toanthan.rotation
+
+ROUTE timerchan.fraction_changed TO	pchantrai.set_fraction
+ROUTE timerchan.fraction_changed TO pchanphai.set_fraction
+
+ROUTE pchantrai.value_changed TO chantrai.rotation
+ROUTE pchanphai.value_changed TO chanphai.rotation
+
+ROUTE timertayphai.fraction_changed	TO	ptayphai.set_fraction
+ROUTE ptayphai.value_changed TO  tayphai.rotation
+
+ROUTE timertayphai.fraction_changed	TO ptaytrai.set_fraction
+ROUTE ptaytrai.value_changed TO	taytrai.rotation
+
+ROUTE timerdia.fraction_changed	TO pdiathucan.set_fraction
+ROUTE pdiathucan.value_changed TO diathucan.translation
+
+#ROUTE timerchan.fraction_changed TO	pchantrai.set_fraction
+#ROUTE pchantrai.value_changed TO chantrai.rotation
+
+#ROUTE timerchan.fraction_changed TO	pchanphai.set_fraction
+#ROUTE pchanphai.value_changed TO chanphai.rotation
+

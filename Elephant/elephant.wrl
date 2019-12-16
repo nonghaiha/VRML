@@ -1,0 +1,67 @@
+#VRML V2.0 utf8
+#thân
+Transform {
+	scale .8 2 1
+	translation	0 -5 0
+	rotation 0 0 1 1.57
+	children [
+		Shape {
+			geometry Sphere {
+				radius 10
+			}
+			appearance Appearance {
+				material Material {
+					diffuseColor .28 .28 .28
+					specularColor .156 .156 .156
+					ambientIntensity .113
+					shininess .8
+				}
+				
+			}
+		}
+	]
+}
+#chân trước phải
+Transform {
+	scale .8 2 1
+	rotation 2 2 0 0
+	translation	-8 -14 5
+	children [
+		Shape {
+			geometry Cylinder {
+				bottom TRUE
+				height 4
+				radius 1
+				side TRUE
+				top	TRUE
+			}
+			appearance Appearance {
+				material Material {
+					diffuseColor .54 .54 .54
+				}
+			}
+		}
+	]
+}
+#chân trước trái
+Transform {
+	scale .8 2 1
+	rotation 2 2 0 0
+	translation	-8 -14 5
+	children [
+		Shape {
+			geometry Cylinder {
+				bottom TRUE
+				height 4
+				radius 1
+				side TRUE
+				top	TRUE
+			}
+			appearance Appearance {
+				material Material {
+					diffuseColor .54 .54 .54
+				}
+			}
+		}
+	]
+}

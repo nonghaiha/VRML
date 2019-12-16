@@ -1,0 +1,120 @@
+#VRML V2.0 utf8
+DEF	conbuom Transform {
+	rotation 1 1 0 2
+	children [Transform	{
+	rotation 0 0 1 1
+	children [
+	DEF	 canh	Transform {
+			children [ Shape {
+				 appearance  Appearance
+							{  texture ImageTexture	{
+								url	"./img/canhbuom.jpg"
+							}
+								material  Material { 
+										diffuseColor 1 0 0
+							} }
+				geometry  Extrusion {
+						crossSection [	 -1 0, -0.8 -0.1, -0.6 -0.15,-0.4 -0.2, -0.2 -0.22, 0 -0.25, 0.2 -0.22,0.4 -0.2, 0.6 -0.15,0.8 -0.1, 1 0,	
+										  0.6 -0.09, 0.2 -0.14, -0.2 -0.14, -0.6 -0.09, -1 0]
+		  					
+						spine	[ 0 0 0, 0 1.1 0, 0 1.5 0, 0 1.8 0,0 2.2 0, 0 2.55 0,  0 2.75 0]
+    					scale	[ 0.3 0, 0.8 0.8, 0.9 0.9,  0.95 0.95,0.95 0.95, 0.75 0.75, 0.2 0]
+						orientation	[0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]
+						creaseAngle	1
+    					beginCap  TRUE
+    					endCap    FALSE
+    					solid     FALSE
+					  }
+				}]
+		}
+		]
+}
+	Transform {
+		scale 1 1 1
+					rotation 0 0 1 -1
+					translation	.5 0 0
+					children [USE canh ]
+				}
+					Transform {
+					scale 1.2 1.2 1.2
+					rotation 0 0 1 -2
+					translation	.5 -.5 0
+					children [USE canh ]
+				}
+					Transform {
+					scale 1.2 1.2 1.2
+					rotation 0 0 1 2
+					translation	0 -.5 0
+					children [USE canh ]
+				}
+				Transform {
+					translation	.3 0 0
+					rotation 1 0 0 3.14
+					scale .5 1 .5
+					children [	Shape {
+  appearance  Appearance
+	  { material  Material { 
+		  diffuseColor 0 0 0
+			  	} 
+	
+		}
+  geometry  Extrusion {
+    crossSection [	
+      1  0,  .71 -.71,
+      0 -1,  -.71 -.71,
+     -1  0,  -.71  .71,
+      0  1,   .71  .71,  1 0
+    ]
+    spine [0 -1.5  0, 0 -1 0, 0 -0.5 0, 0 0.5 0, 0 2 0, 0 3 0, 0 3.2 0]
+    scale [0.75 0.75, 0.75 0.75, 0.75 0.75, 0.75 0.75, 0.3 0.3,  0.2 0.2, 0.2 0.2]
+	orientation	[0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0 ]
+	creaseAngle	1
+    beginCap  TRUE
+    endCap    TRUE
+    solid     FALSE
+  }
+}	]
+				}
+				Transform {
+					translation	.3 1.5 0
+					children [				Shape	{
+						appearance Appearance {
+							material Material {
+								diffuseColor 0 0 0
+							}
+						}
+	geometry Sphere	{
+		radius .5
+	}
+}]
+				}
+]
+}
+DEF	timer TimeSensor {
+	cycleInterval 1
+	enabled	TRUE
+	loop TRUE
+}
+DEF	 bay OrientationInterpolator {
+	key	[0 1]
+	keyValue [0 0 0 0,1 0 0 -1]
+}
+DEF	timer2 TimeSensor {
+	cycleInterval 20
+	enabled	TRUE
+	loop TRUE
+}
+DEF	di PositionInterpolator	{
+	key	[0 .3 .6 1]
+	keyValue [-10 0 0,10 0 0,0 10 -10,-10 0 -10]
+}
+DEF	quay OrientationInterpolator {
+	key	[0 .3 .6 1]
+	keyValue [0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0]
+}
+ROUTE timer.fraction_changed TO	bay.set_fraction
+ROUTE bay.value_changed	TO canh.rotation
+ROUTE timer2.fraction_changed TO di.set_fraction
+ROUTE di.value_changed TO conbuom.translation
+#ROUTE timer2.fraction_changed TO quay.set_fraction
+#ROUTE quay.value_changed TO conbuom.rotation
