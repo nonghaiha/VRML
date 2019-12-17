@@ -1,0 +1,242 @@
+#VRML V2.0 utf8
+
+PROTO Fish [
+	# khai báo kiểu dữ liệu thời gian chuyển động của cá
+field SFTime FishSpeed 104,
+    	# khai báo kiểu dữ liệu thời gian chuyển động của đuôi cá
+field SFTime TailSpeed 2,
+       # khai báo kiểu màu sắc
+field SFColor diffuseColor 1.0 0.8 0.0,
+field SFColor specularColor 1 1 0
+] 
+{
+	DEF fish Transform {
+    	rotation 0 0 0 0
+    	children [
+        	#thân cá
+        	Transform {
+            	scale 1 0.5 0.25
+            	children [
+                	Shape {
+                    	geometry Sphere {
+                    	}
+                    	appearance DEF fishBody Appearance {
+                        	material Material {
+                            
+                            	shininess 0.25
+                            
+                            	ambientIntensity 0.25
+                        	}
+
+							texture	ImageTexture {url "daca2.jpg"}
+                    	}
+                	}
+            	]
+        	}
+        	#mắt trái
+        	Transform {
+            	translation -0.70 0.0 0.15
+            	rotation 0 1 0 -0.141
+            	scale 1 1 0.5
+            	children [
+                	DEF fishEyeShape Shape {
+                    	geometry Sphere {
+                        	radius 0.10
+                    	}
+                    	appearance Appearance {
+                        	material Material {
+                            	diffuseColor 1.0 1.0 1.0
+                            	shininess 0.5
+                            	specularColor 1.0 1.0 1.0
+                            	ambientIntensity 0.25
+                        	}
+                        	texture ImageTexture {
+                            	url "eye.jpg"
+                        	}
+                    	}
+                	}
+            	]
+        	}
+        	#mắt phải
+        	Transform {
+            	translation -0.70 0.0 -0.15
+            	rotation 0 1 0 -3.0
+            	scale 1 1 0.5
+            	children [
+                	USE fishEyeShape
+            	]
+        	}
+        	#đuôi
+        	DEF fishTail Transform {
+            	translation 0.85 0.0 0.0
+            	scale 0.5 1.0 0.125
+            	rotation 0 0 0 0
+            	children [
+                	Transform {
+                    	translation 0.5 0.0 0.0
+                    	children [
+                        	Shape {
+                            	geometry Sphere {
+                                	radius 0.5
+                            	}
+                            	appearance USE fishBody
+                        	}
+                    	]
+                	}
+            	]
+        	}
+        	#vây lưng
+        	Transform {
+            	translation 0.0 0.5 0.0
+            	scale 1 0.5 0.0125
+            	rotation 0 0 1 0.5
+            	children [
+                	Shape {
+                    	geometry Sphere {
+                        	radius 0.5
+                    	}
+                    	appearance USE fishBody
+                	}
+            	]
+        	}
+        	#vây trái
+        	Transform {
+            	translation 0 -0.25 0.25
+            	scale 1 0.5 0.0125
+            	rotation 1 0 1 -0.5
+            	children [
+                	Shape {
+                    	geometry Sphere {
+                        	radius 0.25
+                    	}
+                    	appearance USE fishBody
+                	}
+            	]
+        	}
+        	#vây phải
+        	Transform {
+            	translation 0 -0.25 -0.25
+            	scale 1 0.5 0.0125
+            	rotation -1 0 1 -0.5
+            	children [
+                	Shape {
+                    	geometry Sphere {
+                        	radius 0.25
+                    	}
+                    	appearance USE fishBody
+                	}
+            	]
+        	}
+        	#vây bụng
+        	Transform {
+            	translation 0.35 -0.5 0.0
+            	scale 1 0.5 0.0125
+            	rotation 0 0 1 0.125
+            	children [
+                	Shape {
+                    	geometry Sphere {
+                        	radius 0.25
+                    	}
+                    	appearance USE fishBody
+                	}
+            	]
+        	}
+    	]
+	}
+
+
+	##### Các sự kiện cảm biến
+
+	# cảm biến thời gian với số giay tạo ra sự kiện là FishSpeed
+	DEF fishClock TimeSensor {
+		cycleInterval IS FishSpeed
+    	  loop TRUE
+	}
+
+	# cảm biến thời gian với số giay tạo ra sự kiện là TailSpeed
+	DEF fishTailClock TimeSensor {
+		cycleInterval IS TailSpeed
+    	  loop TRUE
+	}
+
+
+
+
+  	DEF fishOrientation PositionInterpolator {
+		key	[ 0.0,0.02,0.04,0.06,0.08,
+			  0.1,0.12,0.14,0.16,0.18,
+			  0.2,0.22,0.24,0.26,0.28,
+			  0.3,0.32,0.34,0.36,0.38,
+			  0.4,0.42,0.44,0.46,0.48,
+			  0.5,0.52,0.54,0.56,0.58,
+			  0.6,0.62,0.64,0.66,0.68,
+			  0.7,0.72,0.74,0.76,0.78,
+			  0.8,0.82,0.84,0.86,0.88,
+			  0.9,0.92,0.94,0.96, 0.98 1
+		]
+
+		keyValue [ 8 4 15,8 4 15,8 4 15,8 4 15,8 4 15,8 4 15,8 4 15,8 4 15 ,8 4 15
+				  7 3.5 15,4 3 15,2 2 15,0 1 15,-1 0 15,-3 -1 15,-4 -3 15,-5 -5 15 ,-5 -5 15
+				  -5 -5 15,-7 -5 15,-7 -5 15,-7 -5 15,-7 -5 15,-7 -5 15,-7 -5 15,-7 -5 15 ,-7 -5 15
+				  -6 -5 15,-2 -5 17,1 -5 17,3 -5 17,6 -5 17,10 -5 17,12 -5 17,12 -5 17 ,12 -5 17
+				  12 -4 15,11 -2 15,10 -1 15,9 0 15,9 1 15,8 2 15,8 3 15,8 4 15 ,8 4 15
+		
+		         ]
+	
+	}
+
+	DEF fishRotation OrientationInterpolator {
+    	key [0.0,  0.05
+			 0.1,  0.15
+			 0.2,  0.25
+			 0.3,  0.35
+			 0.4,  0.45
+			 0.5,  0.55
+			 0.6,  0.65
+			 0.7,  0.75
+			 0.8,  0.85
+			 0.9,  0.95
+		    ]
+    	keyValue [0 1 0 -4.71 ,0 1 0 -4.71
+			      0 1 0 -4.71 ,0 1 0 -4.71
+				  0 1 0 0 ,0 1 0 0
+				   0 1 0 0 ,0 1 0 0
+			      0 1 0 0 ,0 1 0 0
+				 0 1 0  1.57 ,0 1 0  2.57
+				  0 1 0 -3.14 ,0 1 0 -3.14
+			      0 1 0 -1 ,0 0 1 -1.05
+				  0 0 1 -1.1 ,0 0 1 -1.1
+			      0 0 1 -1.2 ,0 1 0 -4.71
+		          ]
+	}
+
+	DEF fishTailRotation OrientationInterpolator {
+    	key [0, 0.25, 0.5, 0.75, 1.0]
+    	keyValue [0 1 0 0, 0 1 0 0.5, 0 1 0 0, 0 1 0 -0.5, 0 1 0 0]
+	}
+
+
+
+	#chuỗi sự kiện liên tục cho cá di chuyển dựa vào giá trị kích hoạt là hàm fraction_changed của TimeSensor
+	ROUTE fishClock.fraction_changed TO fishOrientation.set_fraction
+	ROUTE fishOrientation.value_changed TO fish.set_translation
+
+
+	# chuối sự kiện liên tục cho cá quay đầu khi di chuyển vòng tròn dựa vào giá trị kích hoạt là hàm fraction_changed của TimeSensor
+	ROUTE fishClock.fraction_changed TO fishRotation.set_fraction
+	ROUTE fishRotation.value_changed TO fish.set_rotation
+
+
+   # chuỗi sự kiện liên tục của hành động vẫy đuôi dựa vào giá trị kích hoạt là hàm fraction_changed của TimeSensor	
+	ROUTE fishTailClock.fraction_changed TO fishTailRotation.set_fraction
+	ROUTE fishTailRotation.value_changed TO fishTail.set_rotation
+}
+
+
+Transform {
+	children [
+	
+		Fish {}
+	]
+
+}
