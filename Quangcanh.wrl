@@ -362,15 +362,11 @@ Transform {
 	]}
 Transform {
 	scale 1.5 1.5 1.5
-	translation	150 12 30
+	translation	150 17 30
 	children [
-		Inline {url	"BaiTapLon/convat.wrl"}
+		Inline {url	"BaiTapLon/nguoicamgiao.wrl"}
 	]}
-Transform {
-	translation	158 18 20
-	children [
-		Inline {url	"BaiTapLon/nguoi.wrl"}
-	]}
+
 
 Transform {
 	scale 20 10 30
@@ -631,13 +627,7 @@ Transform {
 		Inline {url "Animal\ca(1).wrl"}
 	]
 }
-#nguoi cam lao
-Transform { 	 
-	translation -50 4.5 300
-	children [
-		Inline {url "BaiTapLon\nguoiCamLao.wrl"}
-	]
-}
+
 #####Ca trong ho####
 Transform {
 	scale 4 1 4
