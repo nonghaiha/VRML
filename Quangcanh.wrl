@@ -10,7 +10,7 @@ Background {
 Transform {
 	center 0 -0.1 0
 	rotation 0 1 0 1.57
-	scale 400 20 400
+	scale 300 20 300
 	translation 0 -0.1 0
 	children [
     	Shape {
@@ -134,21 +134,21 @@ Transform {
 	
 }
 Transform {
-	translation 221 76.5 550
+	translation 121 76.5 350
 	children [
 		Inline {url"cay.wrl"}
 	]
 	
 }
 Transform {
-	translation 331 76.5 570
+	translation 31 76.5 400
 	children [
 		Inline {url"cay.wrl"}
 	]
 	
 }
 Transform {
-	translation 281 76.5 450
+	translation 81 76.5 150
 	children [
 		Inline {url"cay.wrl"}
 	]
@@ -273,7 +273,7 @@ Transform {
 }
 Transform {
 	scale 1 1 1
-	translation 432 72 -70
+	translation 382 72 -70
 	children [
 		Inline {url"cay.wrl"}
 	]
@@ -281,7 +281,7 @@ Transform {
 }
 Transform {
 	scale 1 1 1
-	translation 462 72 -170
+	translation 202 72 -170
 	children [
 		Inline {url"cay.wrl"}
 	]
@@ -289,7 +289,7 @@ Transform {
 }
 Transform {
 	scale 1 1 1
-	translation 332 72 -270
+	translation 332 72 -100
 	children [
 		Inline {url"cay.wrl"}
 	]
@@ -297,7 +297,7 @@ Transform {
 }
 Transform {
 	scale 0.5 0.5 0.5
-	translation -432 42.5 370
+	translation -402 42.5 370
 	children [
 		Inline {url"cay.wrl"}
 	]
@@ -305,7 +305,7 @@ Transform {
 }
 Transform {
 	scale 0.5 0.5 0.5
-	translation -476 42.5 353
+	translation -276 42.5 253
 	children [
 		Inline {url"cay.wrl"}
 	]
@@ -313,7 +313,7 @@ Transform {
 }
 Transform {
 	scale 0.5 0.5 0.5
-	translation -424 42.5 453
+	translation -324 42.5 303
 	children [
 		Inline {url"cay.wrl"}
 	]
@@ -369,7 +369,7 @@ Transform {
 
 
 Transform {
-	scale 20 10 30
+	scale 26 10 33
 	translation 140 5 150
 	children [
 		Inline {url"nui1.wrl"}
@@ -378,7 +378,7 @@ Transform {
 }
 Transform {
 	scale 10 5 15
-	translation -350 5 320
+	translation -350 5 310
 	children [
 		Inline {url"nui.wrl"}
 	]
@@ -442,7 +442,7 @@ Transform {
 }
 Transform {
 	scale 0.3 0.3 0.3
-	translation 123 5 456
+	translation 123 5 434
 	children [
 		Inline {url"cay_bui_3dmax.wrl"}
 	]
@@ -450,7 +450,7 @@ Transform {
 }
 Transform {
 	scale 0.3 0.3 0.3
-	translation -22 5 -205
+	translation -122 5 -205
 	children [
 		Inline {url"cay_bui_3dmax.wrl"}
 	]
@@ -497,7 +497,7 @@ Transform {
 }
 Transform {
 	scale 0.3 0.3 0.3
-	translation -2 5 -305
+	translation -205 5 -105
 	children [
 		Inline {url"cay_bui_3dmax.wrl"}
 	]
@@ -565,7 +565,7 @@ Transform {
 }
 Transform {
 	translation	-55 5 0
-	scale 12 0.5 0.7 
+	scale 9 0.5 0.7 
 	rotation 0 10 0 1.5
 	children [
 		Shape {
