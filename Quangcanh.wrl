@@ -6,6 +6,17 @@ Background {
 	skyAngle [ 1.309 1.571 ]
 	skyColor [ 0.0 0.2 0.7 0.0 0.5 1.0 1.0 1.0 1.0 ]
 }
+Sound {
+    source AudioClip {
+        url    "Audio\night2.mp3"
+        loop   TRUE
+    }
+    minFront 1140.0 #vung nghe ro
+    minBack  1140.0
+    maxFront 1180.0	#vung khong nghe
+    maxBack  1180.0
+    location 0 0 0 #vi tri phat
+}
 
 Transform {
 	center 0 -0.1 0
@@ -337,6 +348,20 @@ Transform {
 	]	
 }
 Transform {
+	scale 10 10 8
+	translation 130 5 -70
+	children [
+		Inline {url"nui1.wrl"}
+	]	
+}
+Transform {
+	scale 10 8 10
+	translation -410 5 -350
+	children [
+		Inline {url"nui1.wrl"}
+	]	
+}
+Transform {
 	translation	100 18 59
 	children [
 		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
@@ -373,7 +398,7 @@ Transform {
 	]}
 
 Transform {
-	scale 26 10 33
+	scale 26 15 33
 	translation 140 5 150
 	children [
 		Inline {url"nui1.wrl"}
@@ -381,7 +406,7 @@ Transform {
 	
 }
 Transform {
-	scale 10 5 15
+	scale 10 10 15
 	translation -350 5 310
 	children [
 		Inline {url"nui.wrl"}
@@ -534,6 +559,15 @@ Transform {
 }
 Transform {
 	rotation 3 2.4 2 0
+	scale 6 6 6
+	translation -120 5 -200
+	children [		 
+		Inline {url"Snake.wrl"}
+	]
+	
+}
+Transform {
+	rotation 3 2.4 2 0
 	scale 7 7 7
 	translation -300 8 -200
 	children [
@@ -626,7 +660,7 @@ Transform {
 		Inline {url "Animal\ca(1).wrl"}
 	]
 	scale 4 1 4
-	translation -50 4.5 300
+	translation -55 4.5 300
 	children [
 		Inline {url "Animal\ca(1).wrl"}
 	]
@@ -736,21 +770,21 @@ Transform {
 		}
 	]
 }
-		Transform {
-			translation	-200 18 50
-			children [
-				Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
-			]
-		}
-		Transform {
-			translation	-220 18 90
-			children [
-				Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
-			]
-		}
-		Transform {
-			translation	-150 18 10
-			children [
-				Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
-			]
-		}
+Transform {
+	translation	-200 18 50
+	children [
+		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
+	]
+}
+Transform {
+	translation	-220 18 90
+	children [
+		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
+	]
+}
+Transform {
+	translation	-150 18 10
+	children [
+		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
+	]
+}
