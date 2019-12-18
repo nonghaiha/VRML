@@ -1,6 +1,4 @@
 #VRML V2.0 utf8
-
-
 DEF ng Transform	{
 	children [
 		#Đầu
@@ -8,7 +6,7 @@ DEF ng Transform	{
 			translation	0 6.2 0
 			scale 1 1.2 1
 			children [
-				Inline {url "dau.wrl"}
+				Inline {url "dau2.wrl"}
 			]
 		}
 		#Cổ
@@ -40,12 +38,8 @@ DEF ng Transform	{
 			children [
 				Shape {
 					appearance Appearance {
-						material Material {}
-						texture	ImageTexture {
-							url	"ao2.jpg"
-							repeatS	TRUE
-							repeatT	TRUE
-						}
+						material Material {diffuseColor 0 0.5 1}
+				
 					}
 					geometry Extrusion {
 						crossSection [
@@ -93,14 +87,12 @@ DEF ng Transform	{
 		#tay
 		DEF	tay1 Transform {
 			translation	-2 3.75 0
-			rotation 1 0 0 -1
 			children [
 				Inline {url "tay.wrl"}
 			]
 		}
 		DEF	tay2 Transform {
 			translation	2 3.75 0
-			rotation 1 0 0 -1
 			children [
 				Inline {url "tay.wrl"}
 			]
@@ -109,8 +101,8 @@ DEF ng Transform	{
 		DEF chan Transform {
 			children [
 				Transform {
-					rotation 1 0 0 -1.57
-					translation	-1 -0.8 0.5
+					rotation 1 0 0 -0.38
+					translation	-1 -0.8 0
 					children [
 						Inline {
 							url	"dui.wrl"
@@ -119,8 +111,8 @@ DEF ng Transform	{
 				}
 
 				Transform {
-					rotation 1 0 0 0.19	   
-					translation	-1 -0.8 4.2
+					rotation 1 0 0 0.19
+					translation	-1 -4.3 1.2
 					children [
 						Inline {
 							url	"cangchan.wrl"
@@ -132,8 +124,8 @@ DEF ng Transform	{
 		DEF chan2 Transform {
 			children [
 				Transform {
-					rotation 1 0 0 -1.57
-					translation	1 -0.8 0.5
+					rotation 1 0 0 -0.38
+					translation	1 -0.8 0
 					children [
 						Inline {
 							url	"dui.wrl"
@@ -143,7 +135,7 @@ DEF ng Transform	{
 
 				Transform {
 					rotation 1 0 0 0.19
-					translation	1 -0.8 4.2
+					translation	1 -4.3 1.2
 					children [
 						Inline {
 							url	"cangchan.wrl"
@@ -154,5 +146,53 @@ DEF ng Transform	{
 		}
 	]
 }
+DEF timer TimeSensor {
+    enabled TRUE
+    cycleInterval 4
+    loop TRUE
+    
+}
+DEF	time TimeSensor	{
+	enabled	TRUE
+	cycleInterval 25
+	loop TRUE
+}
 
+DEF dc1 OrientationInterpolator {
+	key [ 0 0.25 0.5 0.75 1]
+	keyValue [ 1 0 0 0, 1 0 0 -0.5,1 0 0 0,1 0 0 0.25,1 0 0 0]
+}
+DEF dc2 OrientationInterpolator {
+	key [ 0 0.25 0.5 0.75 1]
+	keyValue [ 1 0 0 0,1 0 0 0.25,1 0 0 0,1 0 0 -0.5,1 0 0 0]
+}
+
+DEF cbdc1 PositionInterpolator {
+	key [ 0 0.4 0.5 0.9 1]
+	keyValue [ 0 0 0,0 0 50,-18 0 50,-18 0 0,0 0 0]
+}
+DEF quay OrientationInterpolator {
+	key [ 0 0.4 0.41 0.5 0.51 0.9 0.91 0.99 1]
+	keyValue [0 1 0 0,0 1 0 0,0 1 0 -1.57,0 1 0 -1.57,0 1 0 -3.14,0 1 0 -3.14,0 1 0 -4.71,0 1 0 -4.71,0 1 0 -6.28]
+}
+DEF dct1 OrientationInterpolator {
+	key [ 0 0.25 0.5 0.75 1]
+	keyValue [ 1 0 0 0,1 0 0 -0.3,1 0 0 0,1 0 0 0.3,1 0 0 0]
+}
+DEF dct2 OrientationInterpolator {
+	key [ 0 0.25 0.5 0.75 1]
+	keyValue [ 1 0 0 0,1 0 0 0.3,1 0 0 0,1 0 0 -0.3,1 0 0 0]
+}
+ROUTE timer.fraction_changed TO	dc1.set_fraction
+ROUTE dc1.value_changed	TO chan.rotation
+ROUTE timer.fraction_changed TO	dc2.set_fraction
+ROUTE dc2.value_changed	TO chan2.rotation
+ROUTE time.fraction_changed  TO cbdc1.set_fraction
+ROUTE cbdc1.value_changed TO ng.translation
+ROUTE timer.fraction_changed	TO dct1.set_fraction
+ROUTE dct1.value_changed TO	tay1.rotation
+ROUTE timer.fraction_changed	TO dct2.set_fraction
+ROUTE dct2.value_changed TO	tay2.rotation
+ROUTE time.fraction_changed	TO quay.set_fraction
+ROUTE quay.value_changed TO	ng.rotation
 

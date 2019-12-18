@@ -1,0 +1,95 @@
+#VRML V2.0 utf8
+
+DEF dau Transform {
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {}
+						texture ImageTexture {
+							url	"da.png"
+							repeatS TRUE
+							repeatT	TRUE
+						}
+					}
+					geometry Sphere	{
+						radius 1
+					}
+				}
+				Transform {
+					translation	0 0.0001 0
+					rotation 1 0 0 3.14
+					children [
+						Shape {
+							appearance Appearance {material Material {diffuseColor 0 0 0}}
+							geometry Cone {
+								bottomRadius 1.2
+								height 2
+								bottom TRUE
+							}
+						}
+					]
+				}
+				Transform {
+					translation	0 -0.1 0.9
+					children [
+						Shape {
+							appearance Appearance {material Material {} texture ImageTexture {url "da.png"}}
+							geometry Cone {
+								bottomRadius 0.2
+								height 0.5
+							}
+						}
+					]
+				}
+				Transform {
+					translation	0.4 -0.05 0.9
+					children [
+						Shape {
+							appearance Appearance {material Material {diffuseColor 0 0 0}}
+							geometry Sphere	{radius 0.1}
+						}
+					]
+				}
+				Transform {
+					translation	-0.4 -0.05 0.9
+					children [
+						Shape {
+							appearance Appearance {material Material {diffuseColor 0 0 0}}
+							geometry Sphere	{radius 0.1}
+						}
+					]
+				}
+				Transform {
+					scale 0.7 1 0.05
+					translation	1 0 0
+					children [
+						Shape {
+							appearance Appearance {material Material {}texture ImageTexture {url "da.png"}}
+							geometry Sphere	{radius 0.2}
+						}
+					]
+				}
+				Transform {
+					scale 0.7 1 0.05
+					translation	-1 0 0
+					children [
+						Shape {
+							appearance Appearance {material Material {}texture ImageTexture {url "da.png"}}
+							geometry Sphere	{radius 0.2}
+						}
+					]
+				}
+				Transform {
+					rotation 1 0 0 1.57
+					translation	0 -0.6 0.8
+					scale 1.5 0.1 0.5
+					children [
+						Shape {
+							appearance Appearance {material Material {diffuseColor 1 0 0}}
+							geometry Sphere	{radius 0.1}
+						}
+					]
+				}
+			]				
+	
+		}

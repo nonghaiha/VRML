@@ -1,30 +1,30 @@
 #VRML V2.0 utf8
 
 Background {
-  groundAngle [ 1.309 1.570796 ]
-  groundColor [ 0.1 0.1 0.0 0.4 0.25 0.2 0.6 0.6 0.6 ]
-  skyAngle [ 1.309 1.571 ]
-  skyColor [ 0.0 0.2 0.7 0.0 0.5 1.0 1.0 1.0 1.0 ]
+	groundAngle [ 1.309 1.570796 ]
+	groundColor [ 0.1 0.1 0.0 0.4 0.25 0.2 0.6 0.6 0.6 ]
+	skyAngle [ 1.309 1.571 ]
+	skyColor [ 0.0 0.2 0.7 0.0 0.5 1.0 1.0 1.0 1.0 ]
 }
 
 Transform {
-  center 0 -0.1 0
-  rotation 0 1 0 1.57
-  scale 400 20 400
-  translation 0 -0.1 0
-  children [
-      Shape {
-        appearance Appearance {
-          material Material {
-            diffuseColor 0.4 0.6 0.3
-            emissiveColor 0 0.05 0
-          }
-        }
-        geometry Box {
-          size 3 0.2 3
-        }
-      }
-  ]
+	center 0 -0.1 0
+	rotation 0 1 0 1.57
+	scale 400 20 400
+	translation 0 -0.1 0
+	children [
+    	Shape {
+        	appearance Appearance {
+        		material Material {
+            		diffuseColor 0.4 0.6 0.3
+            		emissiveColor 0 0.05 0
+        		}
+        	}
+        	geometry Box {
+        		size 3 0.2 3
+        	}
+    	}
+	]
 }
 Transform {
 	children [
@@ -32,11 +32,76 @@ Transform {
 	]
 }
 Transform {
+	translation 40 35 45
+	children [
+		Inline {url"BaiTapLon/conbuom.wrl"}
+	]	
+}
+Transform {
+	translation 90 35 45
+	children [
+		Inline {url"BaiTapLon/conbuom1.wrl"}
+	]	
+}
+Transform {
+	translation 140 35 45
+	children [
+		Inline {url"BaiTapLon/conbuom2.wrl"}
+	]	
+}
+
+Transform {
+	translation -300 35 45
+	children [
+		Inline {url"BaiTapLon/conbuom.wrl"}
+	]	
+}
+Transform {
+	translation -360 35 80
+	children [
+		Inline {url"BaiTapLon/conbuom1.wrl"}
+	]	
+}
+
+Transform {
+	translation -360 5 80
+	children [
+		Inline {url"BaiTapLon/nguoiCamLao.wrl"}
+	]	
+}
+
+Transform {
+	translation -240 35 100
+	children [
+		Inline {url"BaiTapLon/conbuom2.wrl"}
+	]	
+}
+
+Transform {
+	translation 360 35 -300
+	children [
+		Inline {url"BaiTapLon/conbuom.wrl"}
+	]	
+}
+Transform {
+	translation 300 35 -350
+	children [
+		Inline {url"BaiTapLon/conbuom1.wrl"}
+	]	
+}
+Transform {
+	translation 340 35 -360
+	children [
+		Inline {url"BaiTapLon/conbuom2.wrl"}
+	]	
+}
+
+
+Transform {
 	translation 3 76.5 45
 	children [
 		Inline {url"cay.wrl"}
-	]
-	
+	]	
 }
 Transform {
 	translation 300 76.5 -106
@@ -205,14 +270,49 @@ Transform {
 	]
 	
 }
+
 Transform {
 	scale 5 1 8
 	translation 149 5 30
 	children [
 		Inline {url"nui1.wrl"}
-	]
-	
+	]	
 }
+Transform {
+	translation	100 18 59
+	children [
+		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
+	]
+}
+Transform {
+	translation	20 12 90
+	children [
+		Inline {url	"BaiTapLon/nguoidi.wrl"}
+	]
+}
+Transform {
+	translation	150 18 10
+	children [
+		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
+	]
+}
+Transform {
+	translation	142 18 20
+	children [
+		Inline {url	"BaiTapLon/nguoi.wrl"}
+	]}
+Transform {
+	scale 1.5 1.5 1.5
+	translation	150 12 30
+	children [
+		Inline {url	"BaiTapLon/convat.wrl"}
+	]}
+Transform {
+	translation	158 18 20
+	children [
+		Inline {url	"BaiTapLon/nguoi.wrl"}
+	]}
+
 Transform {
 	scale 20 10 30
 	translation 140 5 150
@@ -380,8 +480,34 @@ Transform {
 	translation 400 10 -300
 	children [
 		Inline {url"fire.wrl"}
-	]
+	]	
+}
+Transform {			  
+	translation 380 10 -300
+	rotation  10 15.5 20 0
+	children [
+		Inline {url"BaiTapLon/nguoingoi.wrl"}
+	]	
+}
+Transform {			  
+	translation 420 10 -300
+	children [
+		Inline {url"BaiTapLon/nguoingoi.wrl"}
+	]	
+}
+Transform {			  
+	translation 400 10 -320
+	children [
+		Inline {url"BaiTapLon/nguoingoi.wrl"}
+	]	
+}
+
+Transform {
 	
+	translation	370 12 -280
+	children [
+		Inline { url "BaiTapLon/nguoidi.wrl"}
+	]
 }
 Transform {
 	translation	-55 5 0
@@ -390,8 +516,8 @@ Transform {
 	children [
 		Shape {
 			appearance Appearance {
-				   material Material { diffuseColor 0 0 0}
-				   texture	ImageTexture {url "outUVriver2.jpg"}
+				material Material { diffuseColor 0 0 0}
+				texture	ImageTexture {url "outUVriver2.jpg"}
 			}
 			geometry Box {
 				size 100 0 100 
@@ -400,82 +526,89 @@ Transform {
 	]
 }
 Transform {
-		 scale 4 1 4
-		 translation -50 4.5 0
-		 children [
-			 Inline {url "Animal\ca(1).wrl"}
-		 ]
+	scale 4 1 4
+	translation -50 4.5 0
+	children [
+		Inline {url "Animal\ca(1).wrl"}
+	]
 }
 Transform {
-		 scale 4 1 4
-		 translation -50 4.5 10
-		 children [
-			 Inline {url "Animal\ca(1).wrl"}
-		 ]
+	scale 4 1 4
+	translation -50 4.5 10
+	children [
+		Inline {url "Animal\ca(1).wrl"}
+	]
 }
 Transform {
-		 scale 4 1 4
-		 translation -50 4.5 -100
-		 children [
-			 Inline {url "Animal\ca(1).wrl"}
-		 ]
+	scale 4 1 4
+	translation -50 4.5 -100
+	children [
+		Inline {url "Animal\ca(1).wrl"}
+	]
 }
 Transform {
-		 scale 4 1 4
-		 translation -50 4.5 20
-		 children [
-			 Inline {url "Animal\ca(1).wrl"}
-		 ]
+	scale 4 1 4
+	translation -50 4.5 20
+	children [
+		Inline {url "Animal\ca(1).wrl"}
+	]
 }
 Transform {
-		 scale 4 1 4
-		 translation -50 4.5 -200
-		 children [
-			 Inline {url "Animal\ca(1).wrl"}
-		 ]
+	scale 4 1 4
+	translation -50 4.5 -200
+	children [
+		Inline {url "Animal\ca(1).wrl"}
+	]
 }
 Transform {
-		 scale 4 1 4
-		 translation -50 4.5 300
-		 children [
-			 Inline {url "Animal\ca(1).wrl"}
-		 ]
+	scale 4 1 4
+	translation -50 4.5 300
+	children [
+		Inline {url "Animal\ca(1).wrl"}
+	]
+}
+#nguoi cam lao
+Transform { 	 
+	translation -50 4.5 300
+	children [
+		Inline {url "BaiTapLon\nguoiCamLao.wrl"}
+	]
 }
 #####Ca trong ho####
 Transform {
-		 scale 4 1 4
-		 translation -265 5 150
-		 children [
-			 Inline {url "Animal\ca(1).wrl"}
-		 ]
+	scale 4 1 4
+	translation -265 5 150
+	children [
+		Inline {url "Animal\ca(1).wrl"}
+	]
 }
 Transform {
-		 scale 4 1 4
-		 translation -265 5 50
-		 children [
-			 Inline {url "Animal\ca(1).wrl"}
-		 ]
+	scale 4 1 4
+	translation -265 5 50
+	children [
+		Inline {url "Animal\ca(1).wrl"}
+	]
 }
 Transform {
-		 scale 4 1 4
-		 translation -300 5 50
-		 children [
-			 Inline {url "Animal\ca(1).wrl"}
-		 ]
+	scale 4 1 4
+	translation -300 5 50
+	children [
+		Inline {url "Animal\ca(1).wrl"}
+	]
 }
 Transform {
-		 scale 4 1 4
-		 translation -300 5 120
-		 children [
-			 Inline {url "Animal\ca(1).wrl"}
-		 ]
+	scale 4 1 4
+	translation -300 5 120
+	children [
+		Inline {url "Animal\ca(1).wrl"}
+	]
 }
 Transform {
-		 scale 4 1 4
-		 translation -350 5 150
-		 children [
-			 Inline {url "Animal\ca(1).wrl"}
-		 ]
+	scale 4 1 4
+	translation -350 5 150
+	children [
+		Inline {url "Animal\ca(1).wrl"}
+	]
 }
 Transform {
 	scale 2 0.5 3
@@ -483,17 +616,33 @@ Transform {
 	children [
 		Shape {
 			appearance Appearance {
-				   material Material { diffuseColor 0 0 0}
-				   texture	ImageTexture {url "ho.png"}
+				material Material { diffuseColor 0 0 0}
+				texture	ImageTexture {url "ho.png"}
 			}
 			geometry Cylinder {
-				radius 50
-			
+				radius 50	
 			}
 		}
+	]
+}
+Transform {
+	translation	-200 18 50
+	children [
+		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
+	]
+}
+Transform {
+	translation	-220 18 90
+	children [
+		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
+	]
+}
+Transform {
+	translation	-150 18 10
+	children [
+		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
 	]
 }
 
 
 
-										 
