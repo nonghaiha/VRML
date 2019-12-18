@@ -27,11 +27,6 @@ Transform {
 	]
 }
 Transform {
-	children [
-		Shape {}
-	]
-}
-Transform {
 	translation 40 35 45
 	children [
 		Inline {url"BaiTapLon/conbuom.wrl"}
@@ -354,9 +349,7 @@ Transform {
 	]
 }
 Transform {
-<<<<<<< HEAD
 	scale 30 10 30
-=======
 	translation	150 18 10
 	children [
 		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
@@ -381,7 +374,6 @@ Transform {
 
 Transform {
 	scale 20 10 30
->>>>>>> duylong
 	translation 140 5 150
 	children [
 		Inline {url"nui1.wrl"}
@@ -549,20 +541,20 @@ Transform {
 	]	
 }
 Transform {			  
-	translation 380 10 -300
+	translation -280 8 -218
 	rotation  10 15.5 20 0
 	children [
 		Inline {url"BaiTapLon/nguoingoi.wrl"}
 	]	
 }
 Transform {			  
-	translation 420 10 -300
+	translation -290 8 -178
 	children [
 		Inline {url"BaiTapLon/nguoingoi.wrl"}
 	]	
 }
 Transform {			  
-	translation 400 10 -320
+	translation -320 10 -218
 	children [
 		Inline {url"BaiTapLon/nguoingoi.wrl"}
 	]	
@@ -628,13 +620,11 @@ Transform {
 	]
 }
 Transform {
-<<<<<<< HEAD
-		 scale 4 1 4
-		 translation -50 4.5 100
-		 children [
-			 Inline {url "Animal\ca(1).wrl"}
-		 ]
-=======
+	scale 4 1 4
+	translation -50 4.5 100
+	children [
+		Inline {url "Animal\ca(1).wrl"}
+	]
 	scale 4 1 4
 	translation -50 4.5 300
 	children [
@@ -647,7 +637,6 @@ Transform {
 	children [
 		Inline {url "BaiTapLon\nguoiCamLao.wrl"}
 	]
->>>>>>> duylong
 }
 #####Ca trong ho####
 Transform {
@@ -701,7 +690,6 @@ Transform {
 		}
 	]
 }
-<<<<<<< HEAD
 ###Da ngoi###
 Transform {
 	translation	-290 5 -180
@@ -709,8 +697,8 @@ Transform {
 	children [
 		Shape {
 			appearance Appearance {
-				   material Material { diffuseColor 0 0 0}
-				   texture	ImageTexture {url "rock_d01.png"}
+				material Material { diffuseColor 0 0 0}
+				texture	ImageTexture {url "rock_d01.png"}
 			}
 			geometry Box {
 				size 5 2 5
@@ -724,8 +712,8 @@ Transform {
 	children [
 		Shape {
 			appearance Appearance {
-				   material Material { diffuseColor 0 0 0}
-				   texture	ImageTexture {url "rock_d01.png"}
+				material Material { diffuseColor 0 0 0}
+				texture	ImageTexture {url "rock_d01.png"}
 			}
 			geometry Box {
 				size 5 3 5
@@ -735,37 +723,34 @@ Transform {
 }
 Transform {
 	translation	-280 5 -220
-	scale 2 1 2
+	scale 2 1 2						 
 	children [
 		Shape {
 			appearance Appearance {
-				   material Material { diffuseColor 0 0 0}
-				   texture	ImageTexture {url "rock_d01.png"}
+				material Material { diffuseColor 0 0 0}
+				texture	ImageTexture {url "rock_d01.png"}
 			}
 			geometry Box {
 				size 5 3 5
 			}
 		}
-=======
-Transform {
-	translation	-200 18 50
-	children [
-		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
 	]
 }
-Transform {
-	translation	-220 18 90
-	children [
-		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
-	]
-}
-Transform {
-	translation	-150 18 10
-	children [
-		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
->>>>>>> duylong
-	]
-}
-
-
-
+		Transform {
+			translation	-200 18 50
+			children [
+				Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
+			]
+		}
+		Transform {
+			translation	-220 18 90
+			children [
+				Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
+			]
+		}
+		Transform {
+			translation	-150 18 10
+			children [
+				Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
+			]
+		}
