@@ -1,0 +1,845 @@
+#VRML V2.0 utf8
+
+Background{
+groundAngle[1.309 1.570796]
+groundColor[0.1 0.1 0.0 0.4 0.25 0.2 0.6 0.6 0.6]
+skyAngle[1.309 1.571]
+skyColor[0.0 0.2 0.7 0.0 0.5 1.0 1.0 1.0 1.0]
+}
+Sound{
+source AudioClip{
+url "Audio\night2.mp3"
+loop TRUE
+}
+minFront 1140.0 
+minBack 1140.0
+maxFront 1180.0	
+maxBack 1180.0
+location 0 0 0 
+}
+
+Transform{
+center 0 -0.1 0
+rotation 0 1 0 1.57
+scale 300 20 300
+translation 0 -0.1 0
+children[
+Shape{
+appearance Appearance{
+material Material{
+diffuseColor 0.4 0.6 0.3
+emissiveColor 0 0.05 0
+}
+}
+geometry Box{
+size 3 0.2 3
+}
+}
+]
+}
+Transform{
+translation 100 35 45
+children[
+Inline{url"BaiTapLon/conbuom.wrl"}
+]
+}
+Transform{
+translation 70 35 70
+children[
+Inline{url"BaiTapLon/conbuom1.wrl"}
+]
+}
+Transform{
+translation 260 35 60
+children[
+Inline{url"BaiTapLon/conbuom2.wrl"}
+]
+}
+
+Transform{
+translation -150 35 450
+children[
+Inline{url"BaiTapLon/conbuom.wrl"}
+]
+}
+Transform{
+translation -52 35 150
+children[
+Inline{url"BaiTapLon/conbuom1.wrl"}
+]
+}
+
+Transform{
+translation -360 5 80
+children[
+Inline{url"BaiTapLon/nguoiCamLao.wrl"}
+]
+}
+
+Transform{
+translation -250 35 -100
+children[
+Inline{url"BaiTapLon/conbuom2.wrl"}
+]
+}
+
+Transform{
+translation -200 35 -300
+children[
+Inline{url"BaiTapLon/conbuom.wrl"}
+]
+}
+
+
+
+
+
+
+
+
+
+Transform{
+translation 40 35 45
+children[
+Inline{url"BaiTapLon/conbuom.wrl"}
+]
+}
+Transform{
+translation 90 35 45
+children[
+Inline{url"BaiTapLon/conbuom1.wrl"}
+]
+}
+Transform{
+translation 140 35 45
+children[
+Inline{url"BaiTapLon/conbuom2.wrl"}
+]
+}
+
+Transform{
+translation -300 35 45
+children[
+Inline{url"BaiTapLon/conbuom.wrl"}
+]
+}
+
+
+
+
+Transform{
+translation -240 35 100
+children[
+Inline{url"BaiTapLon/conbuom2.wrl"}
+]
+}
+
+
+Transform{
+translation 300 35 -350
+children[
+Inline{url"BaiTapLon/conbuom1.wrl"}
+
+]
+}
+Transform{
+translation 340 35 -360
+children[
+Inline{url"BaiTapLon/conbuom2.wrl"}
+]
+}
+
+
+Transform{
+translation 3 76.5 45
+children[
+Inline{url"cay.wrl"}
+]
+}
+Transform{
+translation 300 76.5 -106
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+translation 45 76.5 236
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+translation 124 76.5 -306
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+translation 322 76.5 6
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+translation 45 76.5 6
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+translation 121 76.5 350
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+translation 31 76.5 400
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+translation 81 76.5 150
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+translation 198 76.5 42
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.5 0.5 0.5
+translation -250 42.5 298
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+translation 239 76.5 0
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+translation -306 76.5 -400
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.5 0.5 0.5
+translation 350 42.5 -120
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.5 0.5 0.5
+translation 350 42.5 -120
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.5 0.5 0.5
+translation -350 42.5 -120
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.5 0.5 0.5
+translation 300 42.5 120
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.7 0.7 0.7
+translation -115 50.5 120
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.7 0.7 0.7
+translation -125 50.5 20
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.7 0.7 0.7
+translation -143 50.5 50
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.7 0.7 0.7
+translation -156 50.5 70
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.7 0.7 0.7
+translation 225 50.5 70
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.7 0.7 0.7
+translation 3 50.5 289
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.7 0.7 0.7
+translation 5 50.5 70
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 1 1 1
+translation 382 72 -70
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 1 1 1
+translation 202 72 -170
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 1 1 1
+translation 332 72 -100
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.5 0.5 0.5
+translation -402 42.5 370
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.5 0.5 0.5
+translation -276 42.5 253
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+Transform{
+scale 0.5 0.5 0.5
+translation -324 42.5 303
+children[
+Inline{url"cay.wrl"}
+]
+
+}
+
+Transform{
+scale 5 10 8
+translation -220 5 -300
+children[
+Inline{url"nui.wrl"}
+]
+
+}
+
+Transform{
+scale 10 5 8
+translation 130 5 -70
+children[
+Inline{url"nui1.wrl"}
+]
+}
+Transform{
+scale 10 10 8
+translation 130 5 -70
+children[
+Inline{url"nui1.wrl"}
+]
+}
+Transform{
+scale 10 8 10
+translation -410 5 -350
+children[
+Inline{url"nui1.wrl"}
+]
+}
+Transform{
+translation	100 18 59
+children[
+Inline{url	"BaiTapLon/nguoidi.wrl"}
+]
+}
+Transform{
+translation	-150 12 90
+children[
+Inline{url	"BaiTapLon/nguoidi.wrl"}
+]
+}
+Transform{
+translation	150 18 10
+children[
+Inline{url	"BaiTapLon/nguoidi.wrl"}
+]
+}
+Transform{
+translation	142 18 20
+children[
+Inline{url	"BaiTapLon/nguoi.wrl"}
+]}
+Transform{
+scale 1.5 1.5 1.5
+translation	150 17 30
+children[
+Inline{url	"BaiTapLon/nguoicamgiao.wrl"}
+]}
+
+
+Transform{
+scale 26 15 33
+translation 140 5 150
+children[
+Inline{url"nui1.wrl"}
+]
+
+}
+Transform{
+scale 10 10 15
+translation -350 5 310
+children[
+Inline{url"nui.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation -200 5 -300
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation -189 5 -6
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation -145 5 -3
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation -22 5 100
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation 58 5 262
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation -90 5 -269
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation 2 5 -190
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation 123 5 434
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation -122 5 -205
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation 1 5 310
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation 400 5 -315
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation 150 5 -320
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation 24 5 -12
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation 88 5 102
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+}
+Transform{
+scale 0.3 0.3 0.3
+translation -205 5 -105
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 0.3 0.3 0.3
+translation -205 5 300
+children[
+Inline{url"cay_bui_3dmax.wrl"}
+]
+
+}
+Transform{
+scale 3 3 3
+translation -255 5 300
+children[
+Inline{url"Snake.wrl"}
+]
+
+}
+Transform{
+rotation 3 2.4 2 0
+scale 6 6 6
+translation 120 5 -300
+children[
+Inline{url"Snake.wrl"}
+]
+
+}
+Transform{
+rotation 3 2.4 2 0
+scale 6 6 6
+translation -120 5 -200
+children[
+Inline{url"Snake.wrl"}
+]
+
+}
+Transform{
+rotation 3 2.4 2 0
+scale 7 7 7
+translation -300 8 -200
+children[
+Inline{url"fire.wrl"}
+]
+}
+Transform{
+translation -280 8 -218
+rotation 10 15.5 20 0
+children[
+Inline{url"BaiTapLon/nguoingoi.wrl"}
+]
+}
+Transform{
+translation -290 8 -178
+children[
+Inline{url"BaiTapLon/nguoingoi.wrl"}
+]
+}
+Transform{
+translation -320 8 -218
+children[
+Inline{url"BaiTapLon/nguoingoi.wrl"}
+]
+}
+
+Transform{
+translation	380 12 -280
+children[
+Inline{url "BaiTapLon/nguoidi.wrl"}
+]
+}
+
+Transform{
+translation	350 18 -280
+children[
+Inline{url "Dong/nguoicamgiao.wrl"}
+]
+}
+Transform{
+translation	340 12 -280
+children[
+Inline{url "Dong/nguoiCamLao.wrl"}
+]
+}
+Transform{
+translation	-55 5 0
+scale 9 0.5 0.7
+rotation 0 10 0 1.5
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 0 0 0}
+texture	ImageTexture{url "outUVriver2.jpg"}
+}
+geometry Box{
+size 100 0 100
+}
+}
+]
+}
+
+Transform{
+scale 4 1 4
+translation -50 4.5 0
+children[
+Inline{url "Animal\ca(1).wrl"}
+]
+}
+Transform{
+scale 4 1 4
+translation -50 4.5 10
+children[
+Inline{url "Animal\ca(1).wrl"}
+]
+}
+Transform{
+scale 4 1 4
+translation -50 4.5 -100
+children[
+Inline{url "Animal\ca(1).wrl"}
+]
+}
+Transform{
+scale 4 1 4
+translation -50 4.5 20
+children[
+Inline{url "Animal\ca(1).wrl"}
+]
+}
+Transform{
+scale 4 1 4
+translation -50 4.5 -200
+children[
+Inline{url "Animal\ca(1).wrl"}
+]
+}
+Transform{
+scale 4 1 4
+translation -50 4.5 100
+children[
+Inline{url "Animal\ca(1).wrl"}
+]
+scale 4 1 4
+translation -55 4.5 300
+children[
+Inline{url "Animal\ca(1).wrl"}
+]
+}
+
+
+Transform{
+scale 4 1 4
+translation -265 5 150
+children[
+Inline{url "Animal\ca(1).wrl"}
+]
+}
+Transform{
+scale 4 1 4
+translation -265 5 50
+children[
+Inline{url "Animal\ca(1).wrl"}
+]
+}
+Transform{
+scale 4 1 4
+translation -300 5 50
+children[
+Inline{url "Animal\ca(1).wrl"}
+]
+}
+Transform{
+scale 4 1 4
+translation -300 5 120
+children[
+Inline{url "Animal\ca(1).wrl"}
+]
+}
+Transform{
+scale 4 1 4
+translation -350 5 150
+children[
+Inline{url "Animal\ca(1).wrl"}
+]
+}
+
+Transform{
+scale 2 0.5 3
+translation	-300 5 100
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 0 0 0}
+texture	ImageTexture{url "ho.png"}
+}
+geometry Cylinder{
+radius 50
+}
+}
+]
+}
+
+Transform{
+translation -230 12 150
+children[
+Inline{url "BaiTapLon\nguoiCamLao.wrl"}
+]
+}
+
+Transform{
+translation	-290 5 -180
+scale 2 1 2
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 0 0 0}
+texture	ImageTexture{url "rock_d01.png"}
+}
+geometry Box{
+size 5 2 5
+}
+}
+]
+}
+Transform{
+translation	-320 5 -220
+scale 2 1 2
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 0 0 0}
+texture	ImageTexture{url "rock_d01.png"}
+}
+geometry Box{
+size 5 3 5
+}
+}
+]
+}
+Transform{
+translation	-280 5 -220
+scale 2 1 2
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 0 0 0}
+texture	ImageTexture{url "rock_d01.png"}
+}
+geometry Box{
+size 5 3 5
+}
+}
+]
+}
+Transform{
+translation	-200 18 50
+children[
+Inline{url	"BaiTapLon/nguoidichuyen2.wrl"}
+]
+}
+Transform{
+translation	-220 18 90
+children[
+Inline{url	"BaiTapLon/nguoidichuyen2.wrl"}
+]
+}
+Transform{
+translation	-150 18 10
+children[
+Inline{url	"BaiTapLon/nguoidichuyen2.wrl"}
+]
+}

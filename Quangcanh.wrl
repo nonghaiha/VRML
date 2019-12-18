@@ -637,9 +637,22 @@ Transform {
 }
 
 Transform {	
-	translation	370 12 -280
+	translation	380 12 -280
 	children [
 		Inline { url "BaiTapLon/nguoidi.wrl"}
+	]
+}
+#đông
+Transform {	
+	translation	350 18 -280
+	children [
+		Inline { url "Dong/nguoicamgiao.wrl"}
+	]
+}
+Transform {
+	translation	340 12 -280
+	children [
+		Inline { url "Dong/nguoiCamLao.wrl"}
 	]
 }
 Transform {

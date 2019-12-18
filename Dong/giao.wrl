@@ -1,0 +1,63 @@
+#VRML V2.0 utf8
+
+DEF giao Transform {
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor .33 .34 .6
+					specularColor .29 .29 .29
+					ambientIntensity .103
+					shininess .79
+				}
+				texture	ImageTexture {
+					url	""
+					repeatS	TRUE
+					repeatT	TRUE
+				}
+			}
+			geometry Extrusion {
+				crossSection [
+					0.5 0,
+					0 2,
+					-0.5 0,
+					0 -2,
+					0.5 0
+				]
+				spine [0 0 -0.15,0 0 0,0 0 0.15]
+				scale [0 0,0.5 0.5,0 0]
+				beginCap TRUE
+				endCap TRUE
+				solid FALSE
+
+			}
+		}
+
+		Transform {
+			translation	 0 -3.2 0
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+
+						}
+						texture	ImageTexture {
+							url""
+							repeatS	TRUE
+							repeatT	TRUE
+						}
+					}
+					geometry Cylinder {
+						radius 0.1
+						top	TRUE
+						bottom TRUE
+						side TRUE
+						height 5
+					}
+
+				}
+			]
+		}
+	]
+}
+

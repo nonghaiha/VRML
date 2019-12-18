@@ -590,9 +590,9 @@ DEF trau Transform{
 center 4 -5.5 10
 children[
 Transform{
-translation	4 -0.5 10
+translation	4 0 10
 rotation 0 1 0 1.57
-scale 1.2 1.2 1.2
+scale 2 2 2
 children[
 Inline{
 url	"contrau.wrl"
@@ -607,6 +607,12 @@ keyValue[1 0 0 0,1 0 0 1.57]
 }
 ]
 }
+
+
+
+
+
+
 
 
 DEF time TimeSensor{
