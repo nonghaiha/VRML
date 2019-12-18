@@ -438,8 +438,7 @@ Transform {
 	translation 88 5 102
 	children [
 		Inline {url"cay_bui_3dmax.wrl"}
-	]
-	
+	]	
 }
 Transform {
 	scale 0.3 0.3 0.3
