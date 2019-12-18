@@ -10,7 +10,7 @@ Transform {
 					appearance Appearance {
 						material Material {
 							ambientIntensity .0533
-							diffuseColor .35 .16 .12
+							diffuseColor .25 .16 .12
 							specularColor .21 .11 0
 							shininess .05
 						}
@@ -66,54 +66,54 @@ Transform {
 			translation	-0.5 -0.8 1.6
 			children USE mat
 		}
-		#sung trau
-		Transform {
-			translation	2 1.4 0.8
-			children [
-				DEF sungtrai Shape {
-					appearance Appearance {
-						material Material {
-							ambientIntensity 0
-							diffuseColor 0 0 0
-							specularColor .29 .3 .29
-							shininess .08
-						}
-					}
-					geometry Extrusion {
-						crossSection [
-							2.00	0.00
-							1.85	0.77
-							1.41	1.41
-							0.77	1.85
-							0.00	2.00
-							-0.77	1.85
-							-1.41	1.41
-							-1.85	0.77
-							-2.00	0.00
-							-1.85	-0.77
-							-1.41	-1.41
-							-0.77	-1.85
-							0.00	-2.00
-							0.77	-1.85
-							1.41	-1.41
-							1.85	-0.77
-							2.00	0.00
-						]
-						spine [0 0 0,-0.2 -1.6 0,-1.5 -2.4 0]
-						scale [0 0,0.15 0.15,0.2 0.2]
-						creaseAngle	1
-						beginCap TRUE
-						endCap TRUE
-						solid FALSE
-					}
-				}
-			]
-		}
-		DEF sungphai Transform {
-			translation -2 1.4 0.8
-			rotation 0 1 0 3.14
-	    	children USE sungtrai
-		}
+#		sung trau
+#		Transform {
+#			translation	2 1.4 0.8
+#			children [
+#				DEF sungtrai Shape {
+#					appearance Appearance {
+#						material Material {
+#							ambientIntensity 0
+#							diffuseColor 0 0 0
+#							specularColor .29 .3 .29
+#							shininess .08
+#						}
+#					}
+#					geometry Extrusion {
+#						crossSection [
+#							2.00	0.00
+#							1.85	0.77
+#							1.41	1.41
+#							0.77	1.85
+#							0.00	2.00
+#							-0.77	1.85
+#							-1.41	1.41
+#							-1.85	0.77
+#							-2.00	0.00
+#							-1.85	-0.77
+#							-1.41	-1.41
+#							-0.77	-1.85
+#							0.00	-2.00
+#							0.77	-1.85
+#							1.41	-1.41
+#							1.85	-0.77
+#							2.00	0.00
+#						]
+#						spine [0 0 0,-0.2 -1.6 0,-1.5 -2.4 0]
+#						scale [0 0,0.15 0.15,0.2 0.2]
+#						creaseAngle	1
+#						beginCap TRUE
+#						endCap TRUE
+#						solid FALSE
+#					}
+#				}
+#			]
+#		}
+#		DEF sungphai Transform {
+#			translation -2 1.4 0.8
+#			rotation 0 1 0 3.14
+#	    	children USE sungtrai
+#		}
 		#tai
 		Transform {
 			translation	1.8 -1 0.8
@@ -124,7 +124,7 @@ Transform {
 					appearance Appearance {
 						material Material {
 							ambientIntensity .0533
-							diffuseColor .35 .16 .12
+							diffuseColor .25 .16 .12
 							specularColor .21 .11 0
 							shininess .05
 						}
@@ -137,7 +137,7 @@ Transform {
 			scale 3.5 1.5 0.5
 			children USE taitrai
 		}
-		#than trau
+		#than
 		Transform {
 			translation	0 -1.5 -4
 			scale 1 1 2
@@ -147,7 +147,7 @@ Transform {
 					appearance Appearance {
 						material Material {
 							ambientIntensity .0533
-							diffuseColor .35 .16 .12
+							diffuseColor .21 .16 .12
 							specularColor .21 .11 0
 							shininess .05
 						}
@@ -155,49 +155,49 @@ Transform {
 				}
 			]
 		}
-		#duoi
-		Transform {
-			translation	0 -1.5 -8
-			children [
-				Shape {
-					appearance Appearance {
-						material Material {
-							ambientIntensity .0533
-							diffuseColor .35 .16 .12
-							specularColor .21 .11 0
-							shininess .05
-						}
-					}
-					geometry Extrusion {
-						crossSection [
-							2.00	0.00
-							1.85	0.77
-							1.41	1.41
-							0.77	1.85
-							0.00	2.00
-							-0.77	1.85
-							-1.41	1.41
-							-1.85	0.77
-							-2.00	0.00
-							-1.85	-0.77
-							-1.41	-1.41
-							-0.77	-1.85
-							0.00	-2.00
-							0.77	-1.85
-							1.41	-1.41
-							1.85	-0.77
-							2.00	0.00
-						]
-						spine [0 0 0.5,0 -0.5 0,0 -2.5 0,0 -2.7 0,0 -2.9 0]
-						scale [0.13 0.13,0.1 0.1,0.06 0.06,0.1 0.1,0 0]
-						creaseAngle	1
-						beginCap TRUE
-						endCap TRUE
-						solid FALSE
-					}
-				}
-			]
-		}
+#		duoi
+#		Transform {
+#			translation	0 -1.5 -8
+#			children [
+#				Shape {
+#					appearance Appearance {
+#						material Material {
+#							ambientIntensity .0533
+#							diffuseColor .35 .16 .12
+#							specularColor .21 .11 0
+#							shininess .05
+#						}
+#					}
+#					geometry Extrusion {
+#						crossSection [
+#							2.00	0.00
+#							1.85	0.77
+#							1.41	1.41
+#							0.77	1.85
+#							0.00	2.00
+#							-0.77	1.85
+#							-1.41	1.41
+#							-1.85	0.77
+#							-2.00	0.00
+#							-1.85	-0.77
+#							-1.41	-1.41
+#							-0.77	-1.85
+#							0.00	-2.00
+#							0.77	-1.85
+#							1.41	-1.41
+#							1.85	-0.77
+#							2.00	0.00
+#						]
+#						spine [0 0 0.5,0 -0.5 0,0 -2.5 0,0 -2.7 0,0 -2.9 0]
+#						scale [0.13 0.13,0.1 0.1,0.06 0.06,0.1 0.1,0 0]
+#						creaseAngle	1
+#						beginCap TRUE
+#						endCap TRUE
+#						solid FALSE
+#					}
+#				}
+#			]
+#		}
 	]
 }
 #chan truoc	trai 0.5 -2.8 -2.2

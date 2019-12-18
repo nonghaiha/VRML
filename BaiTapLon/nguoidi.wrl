@@ -38,9 +38,14 @@ DEF ng Transform	{
 			children [
 				Shape {
 					appearance Appearance {
-						material Material {diffuseColor 0 0.5 1}
-				
+						material Material {}
+						   texture	ImageTexture {
+							url	"ao2.jpg"
+							repeatS	TRUE
+							repeatT	TRUE
+						}
 					}
+
 					geometry Extrusion {
 						crossSection [
 							1 0 , 0.94 -0.355,0.71 -0.71,0.355 -0.94

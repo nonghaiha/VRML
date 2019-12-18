@@ -1,299 +1,587 @@
 #VRML V2.0 utf8
 
-#than
-DEF toanthan Transform {
-	translation	0 0 0
+Viewpoint {
+	orientation	0 1 0 1.57
+	position 30 0 0
+}
+
+DEF nguoi Transform {
 	children [
-		Transform  {
-			translation	0 0 0
+		DEF than Transform {
 			children [
-				Shape {
-					appearance Appearance {
-						material Material {
-							diffuseColor 0.8 0.8 0.8
-						}
-					}
-					geometry Extrusion {
-						crossSection [
-							1  0,  .71 -.71,
-    						0 -1,  -.71 -.71,
-    						-1  0,  -.71  .71,
-    						0  1,   .71  .71   1 0
-						]
-						spine [0 0 0, 0 0.2 0, 0 0.4 0, 0 0.7 0, 0 0.75 0, 0 0.8 0, 0 0.82 0, 0 0.84 0, 0 0.88 0, 0 0.92 0, 0 0.96 0, 0 0.98 0]
-						scale [0.3 0.2, 0.15 0.15, 0.2 0.15, 0.3 0.2, 0.1 0.1, 0.1 0.1, 0.12 0.12, 0.14 0.14, 0.146 0.145, 0.143 0.14, 0.12 0.12, 0.1 0.1 ]
-					}
-				}
-				#mu
+				#dau nguoi
 				Transform {
-					translation	0 0.96 0
+					translation	0 3 0
+					scale 0.8 1 0.8
 					children [
 						Shape {
+							geometry Sphere { radius	1.5}
 							appearance Appearance {
 								material Material {
-									diffuseColor 0 1 0.5
+									ambientIntensity 0
 								}
 							}
-							geometry Cylinder {
-								height 0.08
-								radius 0.15
+						}
+					]
+				}
+				#toc
+				Transform {
+					translation	0 3.5 0
+					scale 0.8 0.7 0.8
+					children [
+						Shape {
+							geometry Sphere { radius	1.5}
+							appearance Appearance {
+								material Material {
+									ambientIntensity 0
+									diffuseColor 0 0 0
+									specularColor .29 .3 .29
+									shininess .08
+								}
+							}
+						}
+					]
+				}
+				#mat
+				Transform {
+					translation	0.5 2.8 0.9
+					children [
+						Shape {
+							geometry Sphere { radius	0.2}
+							appearance Appearance {
+								material Material {
+									ambientIntensity 0
+									diffuseColor 0 0 0
+									specularColor .29 .3 .29
+									shininess .08
+								}
 							}
 						}
 					]
 				}
 				Transform {
-					translation	0 0.92 0.15
+					translation	-0.5 2.8 0.9
 					children [
 						Shape {
+							geometry Sphere { radius	0.2}
 							appearance Appearance {
 								material Material {
-									diffuseColor 0 1 0.5
+									ambientIntensity 0
+									diffuseColor 0 0 0
+									specularColor .29 .3 .29
+									shininess .08
 								}
-							}
-							geometry Cylinder {
-								height 0.01
-								radius 0.15
 							}
 						}
 					]
 				}
-			]
-		}
-		#chan
-		DEF chantrai Transform	{
-			translation 0 0 0
-			children [
+				#mieng
 				Transform {
-					translation	-0.13 -0.4 0
-					rotation 0 0 1 -0.06
+					translation	0 2 0.8
+					scale 3 1 1
 					children [
-						DEF chan Shape {
+						Shape {
+							geometry Sphere { radius	0.1}
 							appearance Appearance {
 								material Material {
-									diffuseColor 0.8 0.8 0.8
+									ambientIntensity .0833
+									diffuseColor .996 0 0
+									shininess .08
+								}
+							}
+						}
+					]
+				}
+				#mui
+				Transform {
+					translation	0 2.5 1
+					scale 1 3 1
+					children [
+						Shape {
+							geometry Sphere { radius	0.1}
+							appearance Appearance {
+								material Material {
+									ambientIntensity 0
+								}
+							}
+						}
+					]
+				}
+				#dai dau
+				Transform {
+					translation	0 3.3 0
+					scale 0.8 1 0.8
+					children [
+						Shape {
+							geometry Cylinder {
+								height 0.5
+								radius 1.5
+								bottom FALSE
+								top	FALSE
+								side TRUE
+							}
+							appearance Appearance {
+								material Material {
+									diffuseColor .88 .15 .01
+									specularColor .19 .03 .03
+									ambientIntensity .0833
+									shininess .08
+								}
+							}
+						}
+					]
+				}
+				Transform {
+					translation	1.2 2.8 0
+					children [
+						Shape {
+							geometry Box {size 0 1.5 0.3}
+							appearance Appearance {
+								material Material {
+									diffuseColor .88 .15 .01
+									specularColor .19 .03 .03
+									ambientIntensity .0833
+									shininess .08
+								}
+							}
+						}
+					]
+				}
+				#tai
+				Transform {
+					translation	1.1 2.8 0
+					scale 1 3 1
+					children [
+						DEF taitrai Shape {
+							geometry Sphere { radius	0.1}
+							appearance Appearance {
+								material Material {
+									ambientIntensity 0
+								}
+							}
+						}
+					]
+				}
+				DEF	taiphai Transform {
+					translation	-1.1 2.8 0
+					scale 1 3 1
+					children USE taitrai
+				}
+				#co
+				Transform  {
+					translation 0 1 0  
+					children [
+						Shape {
+							appearance	Appearance {
+								material Material {
+									ambientIntensity 0
 								}
 							}
 							geometry Extrusion {
 								crossSection [
-									1  0,  .71 -.71,
-    								0 -1,  -.71 -.71,
-    								-1  0,  -.71  .71,
-    								0  1,   .71  .71   1 0
+									2.00	0.00
+									1.85	0.77
+									1.41	1.41
+									0.77	1.85
+									0.00	2.00
+									-0.77	1.85
+									-1.41	1.41
+									-1.85	0.77
+									-2.00	0.00
+									-1.85	-0.77
+									-1.41	-1.41
+									-0.77	-1.85
+									0.00	-2.00
+									0.77	-1.85
+									1.41	-1.41
+									1.85	-0.77
+									2.00	0.00
 								]
-								#spine [0 0 0.15, 0 0 0.01, 0 0.03 0, 0 0.2 0. 0 0.3 0, 0 0.4 0, 0 0.6 0]
-								spine [0 -0.3 0.15, 0 -0.3 0.01, 0 -0.27 0, 0 0 0 ,0 0.1 0, 0 0.2 0, 0 0.4 0 ]
-								scale [0.025 0.025, 0.035 0.035, 0.035 0.035, 0.06 0.06, 0.075 0.075, 0.055 0.055, 0.075 0.075 ]
+								spine [0 0 0,0 0.2 0,0 0.4 0,0 0.7 0]
+								scale [0.4 0.4,0.26 0.26,0.22 0.22,0.21 0.21]
+								creaseAngle	1
+								beginCap TRUE
+								endCap TRUE
+								solid FALSE
+							}
+
+						}
+					]
+				}
+				#than
+				Transform {
+					translation 0 1 0  
+					children [
+						Shape {
+							appearance	Appearance {
+								material Material {
+									ambientIntensity 0
+								}
+								texture	ImageTexture {
+							url	"ao2.jpg"
+							repeatS	TRUE
+							repeatT	TRUE
+						}
+							}
+							geometry Extrusion {
+								crossSection [
+									2.00	0.00
+									1.85	0.77
+									1.41	1.41
+									0.77	1.85
+									0.00	2.00
+									-0.77	1.85
+									-1.41	1.41
+									-1.85	0.77
+									-2.00	0.00
+									-1.85	-0.77
+									-1.41	-1.41
+									-0.77	-1.85
+									0.00	-2.00
+									0.77	-1.85
+									1.41	-1.41
+									1.85	-0.77
+									2.00	0.00
+								]
+								spine [0 0 0,0 -0.7 0,0 -1.2 0,0 -1.2 0,0 -4 0]
+								scale [0.4 0.4,1 0.5,1.2 0.5,0.6 0.5,0.6 0.5]
+								creaseAngle	1
+								beginCap TRUE
+								endCap TRUE
+								solid FALSE
+							}
+
+						}
+					]
+				}
+				#ao
+#				Transform {
+#					translation 0 1 0  
+#					children [
+#						Shape {
+#							appearance	Appearance {
+#								material Material {
+#									diffuseColor 0 0 0
+#									ambientIntensity 0
+#									shininess .08
+#								}
+#							}
+#							geometry Extrusion {
+#								crossSection [
+#									2.00	0.00
+#									1.85	0.77
+#									1.41	1.41
+#									0.77	1.85
+#									0.00	2.00
+#									-0.77	1.85
+#									-1.41	1.41
+#									-1.85	0.77
+#									-2.00	0.00
+#									-1.85	-0.77
+#									-1.41	-1.41
+#									-0.77	-1.85
+#									0.00	-2.00
+#									0.77	-1.85
+#									1.41	-1.41
+#									1.85	-0.77
+#									2.00	0.00
+#								]
+#								spine [0 0 0,0 -0.7 0,0 -1.2 0,0 -1.8 0,0 -4.7 0]
+#								scale [0.41 0.41,1.01 0.51,1.21 0.51,0.61 0.51,0.61 0.51]
+#								creaseAngle	1
+#								beginCap TRUE
+#								endCap TRUE
+#								solid FALSE
+#							}
+
+#						}
+#					]
+#				}
+#				Transform {
+#					translation	0 -3.1 0
+#					scale 1 1 0.8
+#					children [
+#						Shape {
+#							geometry Cylinder {
+#								height 0.3
+#								radius 1.3
+#								bottom FALSE
+#								top	FALSE
+#								side TRUE
+#							}
+#							appearance Appearance {
+#								material Material {
+#									diffuseColor .88 .15 .01
+#									ambientIntensity .0833
+#									shininess .08
+#									specularColor .19 .03 .03
+#								}
+#							}
+#						}
+#					]
+#				}
+				#quan
+				#mat truoc
+				Transform {
+					translation	0 -5 0.7
+					children [
+						DEF mattruoc Shape {
+							geometry Box {size 1.4 4 0}
+							appearance Appearance {
+								material Material {
+									diffuseColor 0 0 0
+									ambientIntensity 0
+									shininess .08
+								}
+							}
+						}
+					]
+				}
+				Transform {
+					translation	0.7 -5 0.7
+					children [
+						DEF mattruoc1 Shape {
+							geometry Box {size 0.3 4 0.01}
+							appearance Appearance {
+								material Material {
+									diffuseColor .88 .15 .01
+									ambientIntensity .0833
+									shininess .08
+									specularColor .19 .03 .03
+								}
+							}
+						}
+					]
+				}
+				Transform {
+					translation	-0.7 -5 0.7
+					children USE mattruoc1
+				}
+				#mat sau
+				Transform {
+					translation	0 -5 -0.7
+					children USE mattruoc
+				}
+				Transform {
+					translation	-0.7 -5 -0.7
+					children USE mattruoc1
+				}
+				Transform {
+					translation	0.7 -5 -0.7
+					children USE mattruoc1
+				}
+
+			]
+		}
+		#chan phai	   -0.6 -3 0
+		DEF chanphai Transform {
+			center -0.6 -3  0
+			children  [
+				DEF	chanphai1 Transform {
+					children [
+						Transform {
+							translation	-0.6 -3 0
+							children [
+								Shape {
+									appearance Appearance {
+										material Material {
+											ambientIntensity 0
+										}
+									}
+									geometry Extrusion {
+										crossSection [
+											2.00	0.00
+											1.85	0.77
+											1.41	1.41
+											0.77	1.85
+											0.00	2.00
+											-0.77	1.85
+											-1.41	1.41
+											-1.85	0.77
+											-2.00	0.00
+											-1.85	-0.77
+											-1.41	-1.41
+											-0.77	-1.85
+											0.00	-2.00
+											0.77	-1.85
+											1.41	-1.41
+											1.85	-0.77
+											2.00	0.00
+										]
+										spine [0 0 0,0 -1.4 0,0 -2.4 0,0 -3 0,0 -4.9 0]
+										scale [0.3 0.35,0.27 0.27,0.2 0.2,0.22 0.22,0.16 0.16]
+										creaseAngle	1
+										beginCap TRUE
+										endCap TRUE
+										solid FALSE
+									}
+								}
+							]
+						}
+						#ban chan
+						Transform {
+							translation	-0.6 -7.9 0.28 
+							scale 1.4 0.6 2.5
+							children [
+								Shape {
+									geometry Sphere	{radius 0.25}
+									appearance Appearance {
+										material Material {
+											ambientIntensity 0
+										}
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+		#chan trai	   0.6 -3 0
+		DEF	chantrai Transform {
+			center -0.6 -3  0
+			translation	1.2 0 0
+			children USE chanphai1
+		}
+		#tay phai	  -1.7 0 0
+		DEF	tayphai Transform {
+			children [
+				Transform {
+					translation	-1.7 0 0
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {
+									ambientIntensity 0
+								}
+							}
+							geometry Extrusion {
+								crossSection [
+									2.00	0.00
+									1.85	0.77
+									1.41	1.41
+									0.77	1.85
+									0.00	2.00
+									-0.77	1.85
+									-1.41	1.41
+									-1.85	0.77
+									-2.00	0.00
+									-1.85	-0.77
+									-1.41	-1.41
+									-0.77	-1.85
+									0.00	-2.00
+									0.77	-1.85
+									1.41	-1.41
+									1.85	-0.77
+									2.00	0.00
+								]
+								#spine [0 0 0,0 -2 0,0.15 -4 0.15]
+								spine [0 0 0,0 -2 0,0 -2 2]
+								scale [0.23 0.23,0.16 0.16,0.14 0.14]
+								creaseAngle	1
+								beginCap TRUE
+								endCap TRUE
+								solid FALSE
+							}
+						}
+					]
+				}
+				#ban tay
+				Transform {
+					translation	-1.7 -2 2.15
+					scale 0.8 0.8 1
+					children [
+						Shape {
+							geometry Sphere { radius	0.35}
+							appearance Appearance {
+								material Material {
+									ambientIntensity 0
+								}
+							}
+						}
+					]
+				}
+				#giao
+				DEF giao Transform {
+					children [
+						Transform {
+							translation	-1.7 1 5.15
+							scale 1.55 2 1.55
+							rotation 1 0 0 0.785
+							children [
+								Inline {
+									url "giao.wrl"
+									bboxCenter 0 0 0
+									bboxSize -1 -1 -1
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+		#tay trai	1.7 0 0
+		DEF	taytrai Transform {
+			children [
+				Transform {
+					translation	1.7 0 0
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {
+									ambientIntensity 0
+								}
+							}
+							geometry Extrusion {
+								crossSection [
+									2.00	0.00
+									1.85	0.77
+									1.41	1.41
+									0.77	1.85
+									0.00	2.00
+									-0.77	1.85
+									-1.41	1.41
+									-1.85	0.77
+									-2.00	0.00
+									-1.85	-0.77
+									-1.41	-1.41
+									-0.77	-1.85
+									0.00	-2.00
+									0.77	-1.85
+									1.41	-1.41
+									1.85	-0.77
+									2.00	0.00
+								]
+								spine [0 0 0,0 -2 0,-0.15 -4 0.15]
+								scale [0.23 0.23,0.16 0.16,0.14 0.14]
+								creaseAngle	1
+								beginCap TRUE
+								endCap TRUE
+								solid FALSE
+							}
+						}
+					]
+				}
+				#ban tay
+				Transform {
+					translation	1.55 -4.1 0.15
+					scale 0.8 1 0.8
+					children [
+						Shape {
+							geometry Sphere { radius	0.35}
+							appearance Appearance {
+								material Material {
+									ambientIntensity 0
+								}
 							}
 						}
 					]
 				}
 			]
-
 		}
-		DEF chanphai Transform	{
-			translation 0 0 0
-			children [
-				Transform {
-					translation	0.13 -0.4 0
-					rotation 0 0 1 0.06
-					children USE chan
-				}
-			]
-		}
-		
-		
-
-		#tay 
-		#tay trai
-		DEF taytrai Transform {
-			translation	-0.16 0.65 0
-			children [
-				Shape {
-					appearance Appearance {
-						material Material {
-							diffuseColor 0.8 0.8 0.8
-						}
-					}
-					geometry Extrusion {
-						crossSection [
-							1  0,  .71 -.71,
-    						0 -1,  -.71 -.71,
-    						-1  0,  -.71  .71,
-    						0  1,   .71  .71   1 0
-						]
-						spine [0 0 0 , -0.3 -0.15 0,-0.31 -0.15 0,-0.3 0 0, -0.27 0.15 0, -0.27 0.16 0]
-						scale [0.03 0.03, 0.03 0.03,0.03 0.03,0.03 0.03, 0.025 0.025, 0.05 0.08]
-					}
-				}
-				
-			]
-		}
-
-		#lao
-		DEF diathucan Transform {
-			translation	-0.42 0.81 0
-			children [
-				Shape {
-					appearance Appearance {	
-						material Material {
-							diffuseColor 0.8 0.8 0.8
-						}
-					}
-					#geometry Box {
-					#	size 0.35 0.01 0.25
-					#}
-					geometry Cylinder {	  
-						radius 0.01
-						height 2
-					}
-				}
-			]
-		}
-
-		#tay phải
-
-		DEF tayphai Transform {
-			translation	0.2 0.63 0
-			children [
-				Shape {
-					appearance Appearance {
-						material Material {
-							diffuseColor 0.8 0.8 0.8
-						}
-					}
-					geometry Extrusion {
-						crossSection [
-							1  0,  .71 -.71,
-    						0 -1,  -.71 -.71,
-    						-1  0,  -.71  .71,
-    						0  1,   .71  .71   1 0
-						]
-						spine [0 0 0, 0.2 -0.3 0, 0.21 -0.3 0, 0.21 -0.5 0, 0.21 -0.51 0]
-						scale [0.03 0.03, 0.03 0.03, 0.03 0.03, 0.026 0.026, 0.07 0.04]
-					}
-				}
-			]
-		}	
 		DEF	touch TouchSensor {
+			enabled	TRUE
 		}
+
 	]
 }
-
-
-DEF	timerdia TimeSensor	{
-	cycleInterval 9.5
-	enabled	FALSE
-}
-DEF	timer TimeSensor {
-	cycleInterval 5.0
-	enabled FALSE
-}
-DEF	nguoiquay OrientationInterpolator {
-	key	[0 0.2 0.4 0.6 0.8 1]
-	keyValue [0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0, 0 1 0 -1.57]
-}
-DEF	timernguoi TimeSensor {
-	cycleInterval 5
-	enabled	FALSE
-	startTime 4
-
-}
-
-DEF	pdichuyen PositionInterpolator {
-	key	[0 0.2 0.4 0.6 0.8 1]
-	keyValue [0 0 0, 0 0 0.6, 0 0 1.2, 0 0 1.8, 0 0 2.4, -0.5 0 2.65]
-}
-
-DEF	timerchan TimeSensor {
-	cycleInterval 6
-	enabled	FALSE
-}
-DEF	pchantrai OrientationInterpolator {
-	key	[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
-	keyValue [1 0 0 0,1 0 0 0.5,1 0 0 0,1 0 0 -0.5,1 0 0 0,1 0 0 0.5, 1 0 0 0, 1 0 0 -0.5, 1 0 0 -0.2, 1 0 0 0]
-}
-DEF	pchanphai OrientationInterpolator {
-	key	[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
-	keyValue [1 0 0 0,1 0 0 -0.5,1 0 0 0,1 0 0 0.5,1 0 0 0, 1 0 0 -0.5, 1 0 0 0, 1 0 0 0.5, 1 0 0 0.2, 1 0 0 0]
-}
-DEF	timertayphai TimeSensor	{
-	cycleInterval 10
-	enabled	FALSE
-}
-
-DEF	ptaytrai OrientationInterpolator {
-	key	[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
-	keyValue [0 0 0 0 ,0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 1 0 0.75,0 1 0 1.57, 0 1 0 1.7, 0 0 0 0, 1 0.5 0 3]
-}
-DEF	ptayphai OrientationInterpolator	{
-	key	[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
-	keyValue [0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 1 0 1 -2, 1 0 1 -2, 1 0 1 -2, 1 0 1 -1, 0 0 0 0]
-}
-
-DEF	pdiathucan PositionInterpolator	{
-	key	[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]
-	keyValue [-0.42 0.81 0,-0.42 0.81 0,-0.42 0.81 0,-0.42 0.81 0,-0.42 0.81 0,-0.42 0.81 0.2,-0.42 0.81 0.3,-0.42 0.81 0.4,-0.2 0.81 0.5, 0 0.5 0.65, 0.1 0.1 0.7]
-}
-
-DEF	script Script {
-	eventIn	SFBool turn
-	eventOut SFBool	lock
-	eventOut SFBool	unlock
-	field SFBool x FALSE
-	url	"javascript:
-	function  turn(val){
-		if(val){
-			x=!x;
-			if(x){
-				lock=true;
-				unlock=false;
-			}
-			else{
-				lock=false;
-				unlock=true;
-			}
-		}
-	}
-	"
-}
-
-ROUTE touch.isActive TO	script.turn
-ROUTE script.lock TO timer.enabled
-ROUTE script.lock TO timernguoi.enabled
-ROUTE script.lock TO timerchan.enabled
-ROUTE script.lock TO timertayphai.enabled
-ROUTE script.lock TO timerdia.enabled
-
-ROUTE touch.touchTime TO timer.startTime
-ROUTE touch.touchTime TO timernguoi.startTime
-ROUTE touch.touchTime TO timerchan.startTime
-ROUTE touch.touchTime TO timertayphai.startTime
-ROUTE touch.touchTime TO timerdia.startTime
-
-ROUTE timer.fraction_changed TO	pdichuyen.set_fraction
-ROUTE pdichuyen.value_changed TO toanthan.translation
-
-ROUTE timernguoi.fraction_changed TO nguoiquay.set_fraction
-ROUTE nguoiquay.value_changed TO toanthan.rotation
-
-ROUTE timerchan.fraction_changed TO	pchantrai.set_fraction
-ROUTE timerchan.fraction_changed TO pchanphai.set_fraction
-
-ROUTE pchantrai.value_changed TO chantrai.rotation
-ROUTE pchanphai.value_changed TO chanphai.rotation
-
-ROUTE timertayphai.fraction_changed	TO	ptayphai.set_fraction
-ROUTE ptayphai.value_changed TO  tayphai.rotation
-
-ROUTE timertayphai.fraction_changed	TO ptaytrai.set_fraction
-ROUTE ptaytrai.value_changed TO	taytrai.rotation
-
-ROUTE timerdia.fraction_changed	TO pdiathucan.set_fraction
-ROUTE pdiathucan.value_changed TO diathucan.translation
-
-#ROUTE timerchan.fraction_changed TO	pchantrai.set_fraction
-#ROUTE pchantrai.value_changed TO chantrai.rotation
-
-#ROUTE timerchan.fraction_changed TO	pchanphai.set_fraction
-#ROUTE pchanphai.value_changed TO chanphai.rotation
-

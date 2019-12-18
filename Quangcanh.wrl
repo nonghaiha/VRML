@@ -27,6 +27,67 @@ Transform {
 	]
 }
 Transform {
+	translation 100 35 45
+	children [
+		Inline {url"BaiTapLon/conbuom.wrl"}
+	]	
+}
+Transform {
+	translation 70 35 70
+	children [
+		Inline {url"BaiTapLon/conbuom1.wrl"}
+	]	
+}
+Transform {
+	translation 260 35 60
+	children [
+		Inline {url"BaiTapLon/conbuom2.wrl"}
+	]	
+}
+
+Transform {
+	translation -150 35 450
+	children [
+		Inline {url"BaiTapLon/conbuom.wrl"}
+	]	
+}
+Transform {
+	translation -52 35 150
+	children [
+		Inline {url"BaiTapLon/conbuom1.wrl"}
+	]	
+}
+
+Transform {
+	translation -360 5 80
+	children [
+		Inline {url"BaiTapLon/nguoiCamLao.wrl"}
+	]	
+}
+
+Transform {
+	translation -250 35 -100
+	children [
+		Inline {url"BaiTapLon/conbuom2.wrl"}
+	]	
+}
+
+Transform {
+	translation -200 35 -300
+	children [
+		Inline {url"BaiTapLon/conbuom.wrl"}
+	]	
+}
+
+#Transform {
+#	translation 250 35 -500
+#	children [
+#		Inline {url"BaiTapLon/conbuom2.wrl"}
+#	]	
+#}
+
+
+Transform {
 	translation 40 35 45
 	children [
 		Inline {url"BaiTapLon/conbuom.wrl"}
@@ -51,19 +112,9 @@ Transform {
 		Inline {url"BaiTapLon/conbuom.wrl"}
 	]	
 }
-Transform {
-	translation -360 35 80
-	children [
-		Inline {url"BaiTapLon/conbuom1.wrl"}
-	]	
-}
 
-Transform {
-	translation -360 5 80
-	children [
-		Inline {url"BaiTapLon/nguoiCamLao.wrl"}
-	]	
-}
+
+
 
 Transform {
 	translation -240 35 100
@@ -72,16 +123,12 @@ Transform {
 	]	
 }
 
+
 Transform {
-	translation 360 35 -300
-	children [
-		Inline {url"BaiTapLon/conbuom.wrl"}
-	]	
-}
-Transform {
-	translation 300 35 -350
+	translation 300 35 -350	 
 	children [
 		Inline {url"BaiTapLon/conbuom1.wrl"}
+		
 	]	
 }
 Transform {
@@ -339,20 +386,19 @@ Transform {
 Transform {
 	translation	100 18 59
 	children [
-		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
-	]
-}
-Transform {
-	translation	20 12 90
-	children [
 		Inline {url	"BaiTapLon/nguoidi.wrl"}
 	]
 }
 Transform {
-	scale 30 10 30
+	translation	-150 12 90
+	children [
+		Inline {url	"BaiTapLon/nguoidi.wrl"}
+	]
+}
+Transform {		  
 	translation	150 18 10
 	children [
-		Inline {url	"BaiTapLon/nguoidichuyen2.wrl"}
+		Inline {url	"BaiTapLon/nguoidi.wrl"}
 	]
 }
 Transform {
@@ -550,14 +596,13 @@ Transform {
 	]	
 }
 Transform {			  
-	translation -320 10 -218
+	translation -320 8 -218
 	children [
 		Inline {url"BaiTapLon/nguoingoi.wrl"}
 	]	
 }
 
-Transform {
-	
+Transform {	
 	translation	370 12 -280
 	children [
 		Inline { url "BaiTapLon/nguoidi.wrl"}
@@ -678,6 +723,13 @@ Transform {
 				radius 50	
 			}
 		}
+	]
+}
+
+Transform {		
+	translation -230 12 150
+	children [
+		Inline {url "BaiTapLon\nguoiCamLao.wrl"}
 	]
 }
 ###Da ngoi###
