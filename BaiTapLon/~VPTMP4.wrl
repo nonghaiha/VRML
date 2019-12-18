@@ -1,0 +1,439 @@
+#VRML V2.0 utf8
+
+DEF nguoi Transform{
+children[
+
+Transform{
+scale 1 1.3 1
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 127 80}
+}
+geometry Sphere{radius 1}
+}
+]
+}
+Transform{
+translation	0 -1 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor .20 0 0}
+
+}
+geometry Cylinder{radius 0.5}
+}
+]
+}
+Transform{
+translation	0 -7 0
+scale 2 1.5 2.5
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 105 105 105}
+texture	ImageTexture{
+url	"ao2.jpg"
+repeatS	TRUE
+repeatT	TRUE
+}
+}
+geometry Extrusion{
+crossSection
+[1 0,.94 -.355,.71 -.71,.355 -.94
+0 -1,-.355 -.94,-.71 -.71,-.94 -.355
+-1 0,-.94 .355,-.71 .71,-.355 .94
+0 1,.355 .94,.71 .71,.94 .355,1 0]
+spine[0 0 0,0 1 0,0 3 0,0 3.3 0,0 3.5 0,0 3.6 0]
+scale[0.5 0.3,0.6 0.33,0.8 0.36,0.77 0.35,0.7 0.35,0.3 0.3]
+}
+}
+]
+}
+Transform{
+translation	0 -8 0
+scale 2 1.5 2
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Extrusion{
+crossSection
+[1 0,.94 -.355,.71 -.71,.355 -.94
+0 -1,-.355 -.94,-.71 -.71,-.94 -.355
+-1 0,-.94 .355,-.71 .71,-.355 .94
+0 1,.355 .94,.71 .71,.94 .355,1 0]
+spine[0 0 0,0 0.1 0,0 0.2 0,0 0.5 0,0 0.7 0]
+scale[0 0,0.2 0.1,0.3 0.2,0.5 0.3,0.5 0.3]
+}
+}
+]
+}
+
+DEF	tay Transform{
+children[
+
+DEF taytren Transform{
+translation	-1.5 -2.5 0
+scale 1.2 1 1
+children[
+Transform{
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 182 193}
+}
+geometry Sphere{radius 0.25}
+}
+]
+}
+Transform{
+translation	0 -1 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 182 193}
+}
+geometry Cylinder{
+radius 0.25
+height 2
+}
+}
+]
+}
+Transform{
+translation	0 -2 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 182 193}
+}
+geometry Sphere{radius 0.25}
+}
+]
+}
+]
+}
+DEF tayduoi Transform{
+translation	-1.5 -4.5 0
+rotation 1 0 0 -0.5
+scale 1.2 1 1
+children[
+Transform{
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Sphere{radius 0.25}
+}
+]
+}
+Transform{
+translation	0 -1 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Cylinder{
+radius 0.25
+height 2
+}
+}
+]
+}
+Transform{
+translation	0 -2 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Sphere{radius 0.25}
+}
+]
+}
+]
+}
+]
+}
+DEF	tay2 Transform{
+children[
+DEF taytren2 Transform{
+translation	1.5 -2.5 0
+scale 1.2 1 1
+children[
+Transform{
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Sphere{radius 0.25}
+}
+]
+}
+Transform{
+translation	0 -1 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Cylinder{
+radius 0.25
+height 2
+}
+}
+]
+}
+Transform{
+translation	0 -2 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Sphere{radius 0.25}
+}
+]
+}
+]
+}
+DEF tayduoi2 Transform{
+translation	1.5 -4.5 0
+rotation 1 0 0 -0.5
+scale 1.2 1 1
+children[
+Transform{
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Sphere{radius 0.25}
+}
+]
+}
+Transform{
+translation	0 -1 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Cylinder{
+radius 0.25
+height 2
+}
+}
+]
+}
+Transform{
+translation	0 -2 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Sphere{radius 0.25}
+}
+]
+}
+]
+}
+]
+}
+
+DEF	chan Transform{
+translation	-1.8 -3.4 0
+scale 1.5 1.5 1.5
+children[
+Transform{
+translation	1.5 -4.5 0
+rotation 0 1 0 1.57
+scale 0.5 0.7 1
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 182 193}
+}
+geometry Extrusion{
+crossSection
+[1 0,.94 -.355,.71 -.71,.355 -.94
+0 -1,-.355 -.94,-.71 -.71,-.94 -.355
+-1 0,-.94 .355,-.71 .71,-.355 .94
+0 1,.355 .94,.71 .71,.94 .355,1 0]
+spine[0 0 0,0 1 0,0 3 0,0 3.3 0,0 3.5 0,0 3.6 0]
+scale[0.5 0.3,0.6 0.33,0.8 0.36,0.77 0.35,0.7 0.35,0.3 0.3]
+}
+}
+]
+}
+
+DEF chanduoi Transform{
+translation	1.5 -4.5 0
+rotation 1 0 0 0.2
+scale 1.2 1 1
+children[
+Transform{
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 182 193}
+}
+geometry Sphere{radius 0.25}
+}
+]
+}
+Transform{
+translation	0 -1 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 182 193}
+}
+geometry Cylinder{
+radius 0.25
+height 2
+}
+}
+]
+}
+Transform{
+translation	0 -2 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 182 193}
+}
+geometry Sphere{radius 0.25}
+}
+]
+}
+]
+}]}
+
+DEF	chan2 Transform{
+translation	-2.8 -3.4 0
+scale 1.5 1.5 1.5
+children[
+Transform{
+translation	1.5 -4.5 0
+rotation 0 1 0 1.57
+scale 0.5 0.7 1
+children[
+Shape{
+appearance Appearance{
+material Material{
+diffuseColor 255 172 91}
+}
+geometry Extrusion{
+crossSection
+[1 0,.94 -.355,.71 -.71,.355 -.94
+0 -1,-.355 -.94,-.71 -.71,-.94 -.355
+-1 0,-.94 .355,-.71 .71,-.355 .94
+0 1,.355 .94,.71 .71,.94 .355,1 0]
+spine[0 0 0,0 1 0,0 3 0,0 3.3 0,0 3.5 0,0 3.6 0]
+scale[0.5 0.3,0.6 0.33,0.8 0.36,0.77 0.35,0.7 0.35,0.3 0.3]
+}
+}
+]
+}
+
+DEF chanduoi2 Transform{
+translation	1.5 -4.5 0
+rotation 1 0 0 0.2
+scale 1.2 1 1
+children[
+Transform{
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Sphere{radius 0.25}
+}
+]
+}
+Transform{
+translation	0 -1 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Cylinder{
+radius 0.25
+height 2
+}
+}
+]
+}
+Transform{
+translation	0 -2 0
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 255 172 91}
+}
+geometry Sphere{radius 0.25}
+}
+]
+}
+]
+}]}
+]
+}
+
+DEF	TS TimeSensor{
+loop TRUE
+cycleInterval 2
+}
+
+
+DEF	OI OrientationInterpolator{
+key[0,.25,.5,.75,1]
+
+keyValue[
+.1 0 0 0,
+.1 0 0 -.1,
+.1 0 0 0,
+.1 0 0 .1,
+.1 0 0 0,
+]
+}
+
+
+DEF	OT OrientationInterpolator{
+key[0,.25,.5,.75,1]
+
+keyValue[
+-1 0 0 0,
+-.1 0 0 -.1,
+-.1 0 0 0,
+-.1 0 0 .1,
+-.1 0 0 0,
+]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

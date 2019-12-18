@@ -19,7 +19,8 @@ DEF nguoi Transform {
 			children [
 				Shape {
 					appearance Appearance {
-						material Material {diffuseColor 255 127 80}
+						material Material {diffuseColor .20 0 0}
+
 					}
 					geometry Cylinder {radius 0.5}
 				}
@@ -31,7 +32,12 @@ DEF nguoi Transform {
 			children [
 				Shape {
 					appearance Appearance {
-						material Material {diffuseColor 255 172 91}
+						material Material {diffuseColor 105 105 105}
+						texture	ImageTexture {
+				url	"ao2.jpg"
+				repeatS	TRUE
+				repeatT	TRUE
+					}
 					}
 					geometry Extrusion {
 						crossSection 
@@ -416,19 +422,19 @@ DEF	OT OrientationInterpolator {
 
 
 
-ROUTE TS.fraction_changed TO OI.set_fraction
-ROUTE TS.fraction_changed TO OT.set_fraction
+#ROUTE TS.fraction_changed TO OI.set_fraction
+#ROUTE TS.fraction_changed TO OT.set_fraction
 
 
 
-ROUTE OI.value_changed TO chan.set_rotation
-ROUTE OI.value_changed TO chan2.set_scaleOrientation
+#ROUTE OI.value_changed TO chan.set_rotation
+#ROUTE OI.value_changed TO chan2.set_scaleOrientation
 
 
-ROUTE OT.value_changed TO chan2.set_rotation
-ROUTE OT.value_changed TO chan.set_scaleOrientation
+#ROUTE OT.value_changed TO chan2.set_rotation
+#ROUTE OT.value_changed TO chan.set_scaleOrientation
 
-ROUTE OI.value_changed TO tay.set_rotation
-ROUTE OI.value_changed TO tay2.set_scaleOrientation
-ROUTE OI.value_changed TO tay2.set_rotation
-ROUTE OI.value_changed TO tay.set_scaleOrientation
+#ROUTE OI.value_changed TO tay.set_rotation
+#ROUTE OI.value_changed TO tay2.set_scaleOrientation
+#ROUTE OI.value_changed TO tay2.set_rotation
+#ROUTE OI.value_changed TO tay.set_scaleOrientation

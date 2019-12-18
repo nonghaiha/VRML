@@ -1,12 +1,9 @@
 #VRML V2.0 utf8
 
 DEF	nguoi Transform {
-	scale .5 .5 .5
+	scale 1 1 1
 	children [
-		Inline {url "nguoi.wrl"}
-		
-		
-		
+		Inline {url "nguoi.wrl"}	
 	]
 }
 
