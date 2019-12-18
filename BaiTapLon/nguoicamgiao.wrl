@@ -585,3 +585,99 @@ DEF nguoi Transform {
 
 	]
 }
+
+DEF trau Transform {
+	center 4 -5.5 10
+	children [
+		 Transform {
+			translation	4 -0.5 10
+			rotation 0 1 0 1.57
+			scale 1.2 1.2 1.2
+			children [
+				Inline {
+					url	"contrau.wrl"
+					bboxCenter 0 0 0
+					bboxSize -1 -1 -1
+				}
+			]
+		}
+		DEF lacthan OrientationInterpolator	{
+			key [0.8,1]
+			keyValue [ 1 0 0 0,  1 0 0 1.57]	
+		}
+	]
+}
+
+#Thoi gian
+DEF time TimeSensor {
+	enabled	FALSE
+	cycleInterval 3
+	loop FALSE
+	startTime 0 
+	stopTime 0 
+}
+
+#Dam giao
+DEF damgiao OrientationInterpolator	{
+
+	key	[0,0.16,0.32,0.48,0.64,0.80,1]
+	keyValue [1 0 0 0,1 0 0 0.9,1 0 0 0.9,1 0 0 0.5,1 0 0 0.5,1 0 0 0.9,1 0 0 0.9] 
+}
+
+DEF chanphaidichuyen OrientationInterpolator	{
+	key	[0,0.2,0.4,0.6,0.8,1]
+	keyValue [1 0 0 0,1 0 0 -0.3,1 0 0 0.3,1 0 0 0,1 0 0 0,1 0 0 0]
+}
+DEF	chantraidichuyen OrientationInterpolator {
+	key	[0,0.2,0.4,0.6,0.8,1]
+	keyValue [1 0 0 0,1 0 0 0.3,1 0 0 -0.3,1 0 0 0,1 0 0 0,1 0 0 0]
+}
+DEF nguoidichuyen PositionInterpolator {
+	key	[0,0.2,0.4,0.6,0.8,1]
+	keyValue [0 0 0,0 0 1,0 0 2.2,0 0 3.2,0 0 3.2,0 0 3.2]
+}
+DEF	taytraidichuyen OrientationInterpolator {
+	key	[0,0.2,0.4,0.6,0.8,1]
+	keyValue [1 0 0 0,1 0 0 -0.3,1 0 0 0.3,1 0 0 0,1 0 0 0,1 0 0 0]
+}
+
+
+DEF ma Script {
+	eventIn	SFBool turnOn
+	field SFBool turn FALSE
+	eventOut SFBool	on
+	url	"javascript:
+	function turnOn(val){
+		if(val){
+			turn=!turn;
+			if(turn){
+				on=TRUE;
+			}else{
+				on=FALSE;
+			}
+		}
+	}
+		
+	"
+}
+
+ROUTE touch.isActive TO	ma.turnOn
+ROUTE ma.on	TO time.enabled
+ROUTE touch.touchTime TO time.startTime
+ROUTE time.fraction_changed	TO damgiao.set_fraction
+ROUTE damgiao.value_changed	TO tayphai.rotation
+
+ROUTE time.fraction_changed TO	lacthan.set_fraction
+ROUTE lacthan.value_changed TO trau.rotation
+
+ROUTE time.fraction_changed	TO chantraidichuyen.set_fraction
+ROUTE chantraidichuyen.value_changed TO	chantrai.rotation
+ROUTE time.fraction_changed	TO chanphaidichuyen.set_fraction
+ROUTE chanphaidichuyen.value_changed TO	chanphai.rotation
+ROUTE time.fraction_changed	TO nguoidichuyen.set_fraction
+ROUTE nguoidichuyen.value_changed TO nguoi.translation
+ROUTE time.fraction_changed	TO taytraidichuyen.set_fraction
+ROUTE taytraidichuyen.value_changed TO	taytrai.rotation
+
+
+							 

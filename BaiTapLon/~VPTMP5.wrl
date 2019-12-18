@@ -1,306 +1,203 @@
 #VRML V2.0 utf8
+DEF ng Transform{
+children[
 
-Viewpoint{
-position 20 0 0
-orientation	0 1 0 1.57
-
+DEF	Dau Transform{
+translation	0 6.2 0
+scale 1 1.2 1
+children[
+Inline{url "dau2.wrl"}
+]
 }
-DEF convat Transform{
-center 0 0 -2.5
-children[
-DEF dau Transform{
-children[
 
-DEF dautrau Transform{
-translation	0 0 0
+DEF	Co Transform{
+translation	0 5 0
 children[
 Shape{
 appearance Appearance{
-material Material{
-ambientIntensity .0533
-diffuseColor .900 .20 .12
-specularColor .21 .11 0
-shininess .05
+material Material{}
+texture	ImageTexture{
+url	"da.png"
+repeatS	TRUE
+repeatT	TRUE
 }
 }
-geometry Extrusion{
-crossSection[
-2.00	0.00
-1.85	0.77
-1.41	1.41
-0.77	1.85
-0.00	2.00
--0.77	1.85
--1.41	1.41
--1.85	0.77
--2.00	0.00
--1.85	-0.77
--1.41	-1.41
--0.77	-1.85
-0.00	-2.00
-0.77	-1.85
-1.41	-1.41
-1.85	-0.77
-2.00	0.00
-]
-spine[0 0 0,0 -0.6 0.4,0 -1.8 1,0 -2.6 1.3,0 -2.7 1.5,0 -2.8 1.5,0 -3 1.5]
-scale[0.2 0.2,0.6 0.6,0.6 0.6,0.25 0.25,0.28 0.28,0.3 0.3,0.1 0.1]
-creaseAngle	1
-beginCap TRUE
-endCap TRUE
-solid FALSE
-}
-}
-]
-}
 
-Transform{
-translation	0.5 -0.8 1.6
-children[
-DEF mat Shape{
-geometry Sphere{radius	0.2}
-appearance Appearance{
-material Material{
-ambientIntensity 0
-diffuseColor 0 0 0
-specularColor .29 .3 .29
-shininess .08
-}
-}
-}
-]
-}
-Transform{
-translation	-0.5 -0.8 1.6
-children USE mat
-}
-
-
-Transform{
-translation	1.8 -1 0.8
-scale 3.5 1.5 0.5
-children[
-DEF taitrai Shape{
-geometry Sphere{radius	0.2}
-appearance Appearance{
-material Material{
-ambientIntensity .0533
-diffuseColor .35 .16 .12
-specularColor .21 .11 0
-shininess .05
-}
-}
-}
-]
-}
-DEF taiphai Transform{
-translation	-1.8 -1 0.8
-scale 3.5 1.5 0.5
-children USE taitrai
-}
-
-Transform{
-translation	0 -1.5 -4
-scale 1 1 2
-children[
-Shape{
-geometry Sphere{radius	2.0}
-appearance Appearance{
-material Material{
-ambientIntensity .0533
-diffuseColor .35 .16 .12
-specularColor .21 .11 0
-shininess .05
-}
-}
-}
-]
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-]
-}
-
-DEF chantruoctrai Transform{
-translation	0.5 -2.8 -2.2
-children[
-Transform{
-children[
-Shape{
-appearance Appearance{
-material Material{
-ambientIntensity .0533
-diffuseColor .35 .16 .12
-specularColor .21 .11 0
-shininess .05
-}
-}
-geometry Extrusion{
-crossSection[
-2.00	0.00
-1.85	0.77
-1.41	1.41
-0.77	1.85
-0.00	2.00
--0.77	1.85
--1.41	1.41
--1.85	0.77
--2.00	0.00
--1.85	-0.77
--1.41	-1.41
--0.77	-1.85
-0.00	-2.00
-0.77	-1.85
-1.41	-1.41
-1.85	-0.77
-2.00	0.00
-]
-spine[0 0 0,0 -1.5 0.2,0 -2.5 0]
-scale[0.25 0.25,0.22 0.22,0.15 0.15]
-creaseAngle	1
-beginCap TRUE
-endCap TRUE
-solid FALSE
-}
-}
-]
-}
-
-Transform{
-translation	0 -2.7 0
-children[
-Shape{
 geometry Cylinder{
-height 0.5
-radius 0.3
-bottom TRUE
-top TRUE
-side TRUE
+bottom	TRUE
+height	0.3
+radius 0.4
+top	TRUE
 }
+}
+]
+}
+
+DEF	than Transform{
+scale 1 1 0.6
+children[
+Shape{
 appearance Appearance{
-material Material{
-diffuseColor 0 0 0
-specularColor .29 .3 .29
-ambientIntensity 0
-shininess .08
+material Material{}
+texture	ImageTexture{
+url	"ao2.jpg"
+repeatS	TRUE
+repeatT	TRUE
 }
+}
+
+geometry Extrusion{
+crossSection[
+1 0,0.94 -0.355,0.71 -0.71,0.355 -0.94
+0 -1,-0.355 -0.94,-0.71 -0.71,-0.94 -0.355
+-1 0,-0.94 0.355,-0.71 0.71,-0.355 0.94
+0 1,0.355 0.94,0.71 0.71,0.94 0.355,1 0
+]
+spine[0 0 0,0 0.8 0,0 1 0,0 3.5 0,0 4.3 0,0 4.9 0,]
+scale[1.6 1.6,1.4 1.4,1.4 1.4,1.8 1.8,1.8 1.8,0.8 0.8,]
+creaseAngle	1
+beginCap TRUE
+endCap TRUE
+solid FALSE
 }
 }
 ]
 }
 
+DEF	hong Transform{
+scale 1 1 0.6
+children[
+Shape{
+appearance Appearance{
+material Material{diffuseColor 0.3 0.3 0.3}
+
+}
+geometry Extrusion{
+crossSection[
+1 0,0.94 -0.355,0.71 -0.71,0.355 -0.94
+0 -1,-0.355 -0.94,-0.71 -0.71,-0.94 -0.355
+-1 0,-0.94 0.355,-0.71 0.71,-0.355 0.94
+0 1,0.355 0.94,0.71 0.71,0.94 0.355,1 0
+]
+spine[0 0 0,0 -0.5 0,0 -0.5 0 0 -1.5 0]
+scale[1.6 1.6,1.5 1.5,1.5 1.5,0.25 0.25]
+creaseAngle	1
+beginCap TRUE
+endCap TRUE
+solid FALSE
+}
+}
 ]
 }
 
-DEF	chantruocphai Transform{
-translation	-1 0 0
-children USE chantruoctrai
+DEF	tay1 Transform{
+translation	-2 3.75 0
+children[
+Inline{url "tay.wrl"}
+]
+}
+DEF	tay2 Transform{
+translation	2 3.75 0
+children[
+Inline{url "tay.wrl"}
+]
 }
 
-DEF	chansautrai Transform{
-translation 0 0 -3.6
-children USE chantruoctrai
+DEF chan Transform{
+children[
+Transform{
+rotation 1 0 0 -0.38
+translation	-1 -0.8 0
+children[
+Inline{
+url	"dui.wrl"
+}
+]
 }
 
-DEF	chansauphai Transform{
-translation	-1 0 0
-children USE chansautrai
+Transform{
+rotation 1 0 0 0.19
+translation	-1 -4.3 1.2
+children[
+Inline{
+url	"cangchan.wrl"
 }
-DEF time TimeSensor{
-cycleInterval 10
+]
+}
+]
+}
+DEF chan2 Transform{
+children[
+Transform{
+rotation 1 0 0 -0.38
+translation	1 -0.8 0
+children[
+Inline{
+url	"dui.wrl"
+}
+]
+}
+
+Transform{
+rotation 1 0 0 0.19
+translation	1 -4.3 1.2
+children[
+Inline{
+url	"cangchan.wrl"
+}
+]
+}
+]
+}
+]
+}
+DEF timer TimeSensor{
+enabled TRUE
+cycleInterval 4
 loop TRUE
-enabled	FALSE
-startTime 0
-stopTime -1
+
 }
-DEF touch TouchSensor{
+DEF	time TimeSensor{
 enabled	TRUE
-}
-DEF trans PositionInterpolator{
-key[0,0.4,0.5,0.9,1]
-keyValue[0 0 0,0 0 8,0 0 8,0 0 0,0 0 0]
-}
-DEF quayphai OrientationInterpolator{
-key[0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1]
-keyValue[1 0 0 0,1 0 0 -0.08,1 0 0 0.08,1 0 0 -0.08,1 0 0 0,1 0 0 0,1 0 0 0.08,1 0 0 -0.08,1 0 0 0.08,1 0 0 0,1 0 0 0]
-}
-DEF quaytrai OrientationInterpolator{
-key[0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1]
-keyValue[1 0 0 0,1 0 0 0.08,1 0 0 -0.08,1 0 0 0.08,1 0 0 0,1 0 0 0,1 0 0 -0.08,1 0 0 0.08,1 0 0 -0.08,1 0 0 0,1 0 0 0]
-}
-DEF	quaytrau OrientationInterpolator{
-key[0.4,0.5,0.9,1]
-keyValue[0 1 0 0,0 1 0 3.14,0 1 0 3.14,0 1 0 6.28]
+cycleInterval 25
+loop TRUE
 }
 
-DEF	ma Script{
-eventIn	SFBool turnOn
-eventOut SFBool	on
-field SFBool turn FALSE
-url"javascript:
-function turnOn(val){
-if(val){
-turn=!turn;
-on=turn;
+DEF dc1 OrientationInterpolator{
+key[0 0.25 0.5 0.75 1]
+keyValue[1 0 0 0,1 0 0 -0.5,1 0 0 0,1 0 0 0.25,1 0 0 0]
+}
+DEF dc2 OrientationInterpolator{
+key[0 0.25 0.5 0.75 1]
+keyValue[1 0 0 0,1 0 0 0.25,1 0 0 0,1 0 0 -0.5,1 0 0 0]
 }
 
+DEF cbdc1 PositionInterpolator{
+key[0 0.4 0.5 0.9 1]
+keyValue[0 0 0,0 0 50,-18 0 50,-18 0 0,0 0 0]
 }
-"
+DEF quay OrientationInterpolator{
+key[0 0.4 0.41 0.5 0.51 0.9 0.91 0.99 1]
+keyValue[0 1 0 0,0 1 0 0,0 1 0 -1.57,0 1 0 -1.57,0 1 0 -3.14,0 1 0 -3.14,0 1 0 -4.71,0 1 0 -4.71,0 1 0 -6.28]
 }
-]
-
+DEF dct1 OrientationInterpolator{
+key[0 0.25 0.5 0.75 1]
+keyValue[1 0 0 0,1 0 0 -0.3,1 0 0 0,1 0 0 0.3,1 0 0 0]
 }
-
-
-
-
-
-
-
-
-
-
-
-
+DEF dct2 OrientationInterpolator{
+key[0 0.25 0.5 0.75 1]
+keyValue[1 0 0 0,1 0 0 0.3,1 0 0 0,1 0 0 -0.3,1 0 0 0]
+}
+ROUTE timer.fraction_changed TO	dc1.set_fraction
+ROUTE dc1.value_changed	TO chan.rotation
+ROUTE timer.fraction_changed TO	dc2.set_fraction
+ROUTE dc2.value_changed	TO chan2.rotation
+ROUTE time.fraction_changed TO cbdc1.set_fraction
+ROUTE cbdc1.value_changed TO ng.translation
+ROUTE timer.fraction_changed	TO dct1.set_fraction
+ROUTE dct1.value_changed TO	tay1.rotation
+ROUTE timer.fraction_changed	TO dct2.set_fraction
+ROUTE dct2.value_changed TO	tay2.rotation
+ROUTE time.fraction_changed	TO quay.set_fraction
+ROUTE quay.value_changed TO	ng.rotation
 
