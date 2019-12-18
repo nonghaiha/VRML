@@ -74,7 +74,21 @@ Transform {
 	
 }
 Transform {
-	translation 221 76.5 400
+	translation 221 76.5 550
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	translation 331 76.5 570
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	translation 281 76.5 450
 	children [
 		Inline {url"cay.wrl"}
 	]
@@ -198,6 +212,55 @@ Transform {
 	
 }
 Transform {
+	scale 1 1 1
+	translation 432 72 -70
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	scale 1 1 1
+	translation 462 72 -170
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	scale 1 1 1
+	translation 332 72 -270
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	scale 0.5 0.5 0.5
+	translation -432 42.5 370
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	scale 0.5 0.5 0.5
+	translation -476 42.5 353
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+Transform {
+	scale 0.5 0.5 0.5
+	translation -424 42.5 453
+	children [
+		Inline {url"cay.wrl"}
+	]
+	
+}
+###Nui###
+Transform {
 	scale 5 10 8
 	translation -220 5 -300
 	children [
@@ -206,15 +269,15 @@ Transform {
 	
 }
 Transform {
-	scale 5 1 8
-	translation 149 5 30
+	scale 10 5 8
+	translation 130 5 -70
 	children [
 		Inline {url"nui1.wrl"}
 	]
 	
 }
 Transform {
-	scale 20 10 30
+	scale 30 10 30
 	translation 140 5 150
 	children [
 		Inline {url"nui1.wrl"}
@@ -271,7 +334,7 @@ Transform {
 }
 Transform {
 	scale 0.3 0.3 0.3
-	translation -45 5 -269
+	translation -90 5 -269
 	children [
 		Inline {url"cay_bui_3dmax.wrl"}
 	]
@@ -359,25 +422,25 @@ Transform {
 }
 Transform {
 	scale 3 3 3
-	translation -255 0 300
+	translation -255 5 300
 	children [
-		Inline {url"Animal/Snake.wrl"}
+		Inline {url"Snake.wrl"}
+	]
+	
+}
+Transform {
+	rotation 3 2.4 2 0
+	scale 6 6 6
+	translation 120 5 -300
+	children [		 
+		Inline {url"Snake.wrl"}
 	]
 	
 }
 Transform {
 	rotation 3 2.4 2 0
 	scale 7 7 7
-	translation 120 0 -300
-	children [
-		Inline {url"Animal/nake.wrl"}
-	]
-	
-}
-Transform {
-	rotation 3 2.4 2 0
-	scale 7 7 7
-	translation 400 10 -300
+	translation -300 8 -200
 	children [
 		Inline {url"fire.wrl"}
 	]
@@ -399,6 +462,7 @@ Transform {
 		}
 	]
 }
+###Ca duoi song###
 Transform {
 		 scale 4 1 4
 		 translation -50 4.5 0
@@ -436,7 +500,7 @@ Transform {
 }
 Transform {
 		 scale 4 1 4
-		 translation -50 4.5 300
+		 translation -50 4.5 100
 		 children [
 			 Inline {url "Animal\ca(1).wrl"}
 		 ]
@@ -477,6 +541,7 @@ Transform {
 			 Inline {url "Animal\ca(1).wrl"}
 		 ]
 }
+###Ho nuoc###
 Transform {
 	scale 2 0.5 3
 	translation	-300 5 100 
@@ -489,6 +554,52 @@ Transform {
 			geometry Cylinder {
 				radius 50
 			
+			}
+		}
+	]
+}
+###Da ngoi###
+Transform {
+	translation	-290 5 -180
+	scale 2 1 2
+	children [
+		Shape {
+			appearance Appearance {
+				   material Material { diffuseColor 0 0 0}
+				   texture	ImageTexture {url "rock_d01.png"}
+			}
+			geometry Box {
+				size 5 2 5
+			}
+		}
+	]
+}
+Transform {
+	translation	-320 5 -220
+	scale 2 1 2
+	children [
+		Shape {
+			appearance Appearance {
+				   material Material { diffuseColor 0 0 0}
+				   texture	ImageTexture {url "rock_d01.png"}
+			}
+			geometry Box {
+				size 5 3 5
+			}
+		}
+	]
+}
+Transform {
+	translation	-280 5 -220
+	scale 2 1 2
+	children [
+		Shape {
+			appearance Appearance {
+				   material Material { diffuseColor 0 0 0}
+				   texture	ImageTexture {url "rock_d01.png"}
+			}
+			geometry Box {
+				size 5 3 5
 			}
 		}
 	]
